@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "include": ["/*"],
+  "exclude": [
+    "/css/*",
+    "/js/*",
+    "/data/*",
+    "/icons/*",
+    "/manifest.json",
+    "/sw.js",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/favicon.svg"
+  ]
+}

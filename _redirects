@@ -1,1 +1,2 @@
-/* /index.html 200
+# Cloudflare Pages SPA — no redirect rules needed.
+# SPA routing is handled by _routes.json exclude list.

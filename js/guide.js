@@ -62,8 +62,8 @@ export function renderLessons() {
     const isCompleted = progress.completadas.includes(lesson.id)
     const isInProgress = progress.en_progreso === lesson.id
     let statusClass = ''
-    let badgeClass = 'lesson-card__badge--locked'
-    let badgeText = t('guide_locked')
+    let badgeClass = ''
+    let badgeText = ''
 
     if (isCompleted) {
       statusClass = 'lesson-card--completed'
