@@ -1,0 +1,6 @@
+<svg width="440" height="160" viewBox="0 0 440 160" xmlns="http://www.w3.org/2000/svg">
+  <rect width="440" height="160" rx="16" fill="#0D0F14"/>
+  <text x="32" y="100" font-family="'IBM Plex Sans','Segoe UI',sans-serif" font-weight="700" font-size="88" fill="#E8EAF0">Linx</text>
+  <text x="248" y="100" font-family="'IBM Plex Sans','Segoe UI',sans-serif" font-weight="700" font-size="88" fill="#00FF88">AI</text>
+  <text x="32" y="132" font-family="'IBM Plex Sans','Segoe UI',sans-serif" font-weight="400" font-size="28" fill="#8B90A8">Tu guía en Linux</text>
+</svg>
