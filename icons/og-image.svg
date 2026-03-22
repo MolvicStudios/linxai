@@ -1,0 +1,8 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0D0F14"/>
+  <text x="470" y="260" text-anchor="end" font-family="'IBM Plex Sans','Segoe UI',sans-serif" font-weight="700" font-size="120" fill="#E8EAF0">Linx</text>
+  <text x="480" y="260" text-anchor="start" font-family="'IBM Plex Sans','Segoe UI',sans-serif" font-weight="700" font-size="120" fill="#00FF88">AI</text>
+  <text x="600" y="370" text-anchor="middle" font-family="'IBM Plex Sans','Segoe UI',sans-serif" font-weight="400" font-size="40" fill="#8B90A8">Tu asistente IA para migrar de Windows a Linux</text>
+  <rect x="440" y="420" width="320" height="4" rx="2" fill="#00FF88" opacity="0.5"/>
+  <text x="600" y="480" text-anchor="middle" font-family="'IBM Plex Sans','Segoe UI',sans-serif" font-weight="500" font-size="28" fill="#555B70">Ubuntu · Linux Mint · Arch · Manjaro</text>
+</svg>
