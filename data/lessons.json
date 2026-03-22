@@ -1,0 +1,216 @@
+{
+  "ubuntu": {
+    "beginner": [
+      {
+        "id": "ub-01",
+        "titulo_es": "El sistema de archivos",
+        "titulo_en": "The file system",
+        "descripcion_es": "Aprende cómo se organiza Linux vs Windows",
+        "descripcion_en": "Learn how Linux is organized vs Windows",
+        "comandos": ["ls", "cd", "pwd", "mkdir"],
+        "pasos": 5
+      },
+      {
+        "id": "ub-02",
+        "titulo_es": "Tu primera terminal",
+        "titulo_en": "Your first terminal",
+        "descripcion_es": "Abre la terminal y ejecuta tus primeros comandos",
+        "descripcion_en": "Open the terminal and run your first commands",
+        "comandos": ["echo", "whoami", "date", "clear"],
+        "pasos": 4
+      },
+      {
+        "id": "ub-03",
+        "titulo_es": "Instalar y desinstalar programas",
+        "titulo_en": "Install and uninstall programs",
+        "descripcion_es": "Aprende a usar apt para gestionar software",
+        "descripcion_en": "Learn to use apt for software management",
+        "comandos": ["apt update", "apt install", "apt remove", "apt search"],
+        "pasos": 5
+      },
+      {
+        "id": "ub-04",
+        "titulo_es": "Mover, copiar y renombrar archivos",
+        "titulo_en": "Move, copy and rename files",
+        "descripcion_es": "Domina la gestión de archivos desde la terminal",
+        "descripcion_en": "Master file management from the terminal",
+        "comandos": ["cp", "mv", "rm", "cat"],
+        "pasos": 5
+      },
+      {
+        "id": "ub-05",
+        "titulo_es": "Permisos de archivos",
+        "titulo_en": "File permissions",
+        "descripcion_es": "Entiende cómo funcionan los permisos en Linux",
+        "descripcion_en": "Understand how permissions work in Linux",
+        "comandos": ["chmod", "chown", "ls -l"],
+        "pasos": 5
+      },
+      {
+        "id": "ub-06",
+        "titulo_es": "Usuarios y sudo",
+        "titulo_en": "Users and sudo",
+        "descripcion_es": "Aprende sobre usuarios, grupos y privilegios",
+        "descripcion_en": "Learn about users, groups and privileges",
+        "comandos": ["sudo", "whoami", "su", "adduser"],
+        "pasos": 4
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "ub-10",
+        "titulo_es": "Redirección y pipes",
+        "titulo_en": "Redirects and pipes",
+        "descripcion_es": "Combina comandos como un pro con | y >",
+        "descripcion_en": "Combine commands like a pro with | and >",
+        "comandos": ["|", ">", ">>", "grep", "sort"],
+        "pasos": 5
+      },
+      {
+        "id": "ub-11",
+        "titulo_es": "Procesos y servicios",
+        "titulo_en": "Processes and services",
+        "descripcion_es": "Monitorea y controla lo que se ejecuta",
+        "descripcion_en": "Monitor and control what's running",
+        "comandos": ["ps", "htop", "kill", "systemctl"],
+        "pasos": 5
+      },
+      {
+        "id": "ub-12",
+        "titulo_es": "Redes y conectividad",
+        "titulo_en": "Networking and connectivity",
+        "descripcion_es": "Diagnostica y configura tu red desde la terminal",
+        "descripcion_en": "Diagnose and configure your network from terminal",
+        "comandos": ["ip", "ping", "ss", "nmcli"],
+        "pasos": 5
+      }
+    ],
+    "advanced": [
+      {
+        "id": "ub-20",
+        "titulo_es": "Shell scripting básico",
+        "titulo_en": "Basic shell scripting",
+        "descripcion_es": "Crea tus propios scripts de automatización",
+        "descripcion_en": "Create your own automation scripts",
+        "comandos": ["bash", "#!/bin/bash", "variables", "if", "for"],
+        "pasos": 6
+      },
+      {
+        "id": "ub-21",
+        "titulo_es": "Cron y tareas programadas",
+        "titulo_en": "Cron and scheduled tasks",
+        "descripcion_es": "Automatiza tareas con crontab",
+        "descripcion_en": "Automate tasks with crontab",
+        "comandos": ["crontab -e", "crontab -l"],
+        "pasos": 4
+      }
+    ]
+  },
+  "arch": {
+    "beginner": [
+      {
+        "id": "ar-01",
+        "titulo_es": "El sistema de archivos",
+        "titulo_en": "The file system",
+        "descripcion_es": "Aprende cómo se organiza Linux vs Windows",
+        "descripcion_en": "Learn how Linux is organized vs Windows",
+        "comandos": ["ls", "cd", "pwd", "mkdir"],
+        "pasos": 5
+      },
+      {
+        "id": "ar-02",
+        "titulo_es": "Tu primera terminal",
+        "titulo_en": "Your first terminal",
+        "descripcion_es": "Abre la terminal y ejecuta tus primeros comandos",
+        "descripcion_en": "Open the terminal and run your first commands",
+        "comandos": ["echo", "whoami", "date", "clear"],
+        "pasos": 4
+      },
+      {
+        "id": "ar-03",
+        "titulo_es": "Instalar y desinstalar con pacman",
+        "titulo_en": "Install and uninstall with pacman",
+        "descripcion_es": "Aprende a usar pacman y yay para gestionar software",
+        "descripcion_en": "Learn to use pacman and yay for software management",
+        "comandos": ["pacman -Syu", "pacman -S", "pacman -Rs", "pacman -Ss"],
+        "pasos": 5
+      },
+      {
+        "id": "ar-04",
+        "titulo_es": "Mover, copiar y renombrar archivos",
+        "titulo_en": "Move, copy and rename files",
+        "descripcion_es": "Domina la gestión de archivos desde la terminal",
+        "descripcion_en": "Master file management from the terminal",
+        "comandos": ["cp", "mv", "rm", "cat"],
+        "pasos": 5
+      },
+      {
+        "id": "ar-05",
+        "titulo_es": "Permisos de archivos",
+        "titulo_en": "File permissions",
+        "descripcion_es": "Entiende cómo funcionan los permisos en Linux",
+        "descripcion_en": "Understand how permissions work in Linux",
+        "comandos": ["chmod", "chown", "ls -l"],
+        "pasos": 5
+      },
+      {
+        "id": "ar-06",
+        "titulo_es": "El AUR y yay",
+        "titulo_en": "The AUR and yay",
+        "descripcion_es": "Accede a miles de paquetes de la comunidad Arch",
+        "descripcion_en": "Access thousands of packages from the Arch community",
+        "comandos": ["yay -S", "yay -Ss", "makepkg"],
+        "pasos": 4
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "ar-10",
+        "titulo_es": "Redirección y pipes",
+        "titulo_en": "Redirects and pipes",
+        "descripcion_es": "Combina comandos como un pro con | y >",
+        "descripcion_en": "Combine commands like a pro with | and >",
+        "comandos": ["|", ">", ">>", "grep", "sort"],
+        "pasos": 5
+      },
+      {
+        "id": "ar-11",
+        "titulo_es": "Procesos y servicios con systemd",
+        "titulo_en": "Processes and services with systemd",
+        "descripcion_es": "Monitorea y controla servicios con systemctl",
+        "descripcion_en": "Monitor and control services with systemctl",
+        "comandos": ["ps", "htop", "kill", "systemctl"],
+        "pasos": 5
+      },
+      {
+        "id": "ar-12",
+        "titulo_es": "Configuración de red",
+        "titulo_en": "Network configuration",
+        "descripcion_es": "Diagnostica y configura tu red",
+        "descripcion_en": "Diagnose and configure your network",
+        "comandos": ["ip", "ping", "ss", "nmcli"],
+        "pasos": 5
+      }
+    ],
+    "advanced": [
+      {
+        "id": "ar-20",
+        "titulo_es": "Shell scripting básico",
+        "titulo_en": "Basic shell scripting",
+        "descripcion_es": "Crea tus propios scripts de automatización",
+        "descripcion_en": "Create your own automation scripts",
+        "comandos": ["bash", "#!/bin/bash", "variables", "if", "for"],
+        "pasos": 6
+      },
+      {
+        "id": "ar-21",
+        "titulo_es": "Personalizar Arch con dotfiles",
+        "titulo_en": "Customize Arch with dotfiles",
+        "descripcion_es": "Gestiona tu configuración como un experto",
+        "descripcion_en": "Manage your configuration like an expert",
+        "comandos": [".bashrc", ".zshrc", "stow", "git"],
+        "pasos": 5
+      }
+    ]
+  }
+}

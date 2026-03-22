@@ -1,0 +1,50 @@
+:root {
+  /* Fondos */
+  --bg-base: #0D0F14;
+  --bg-surface: #141720;
+  --bg-elevated: #1C2030;
+  --bg-hover: #222840;
+
+  /* Acentos */
+  --accent-green: #00FF88;
+  --accent-green-dim: #00CC6A;
+  --accent-blue: #3B8AF0;
+  --accent-blue-dim: #2A6FD4;
+  --accent-amber: #F0A500;
+  --accent-red: #FF4F4F;
+
+  /* Texto */
+  --text-primary: #E8EAF0;
+  --text-secondary: #8B90A8;
+  --text-tertiary: #555870;
+  --text-code: #00FF88;
+
+  /* Bordes */
+  --border-subtle: rgba(255,255,255,0.06);
+  --border-active: rgba(59,138,240,0.4);
+
+  /* Radios */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Fuentes */
+  --font-ui: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Fira Code', monospace;
+
+  /* Espaciado */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Sidebar */
+  --sidebar-width: 260px;
+
+  /* Transiciones */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}

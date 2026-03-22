@@ -1,0 +1,218 @@
+/* ===== SHARED COMPONENTS ===== */
+
+/* Small buttons */
+.btn-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.btn-sm:hover {
+  background: var(--bg-hover);
+}
+
+.btn-sm--danger {
+  color: var(--accent-red);
+  border-color: rgba(255, 79, 79, 0.2);
+}
+
+.btn-sm--danger:hover {
+  background: rgba(255, 79, 79, 0.1);
+}
+
+.btn-sm--primary {
+  background: var(--accent-green);
+  color: var(--bg-base);
+  border-color: transparent;
+}
+
+.btn-sm--primary:hover {
+  background: var(--accent-green-dim);
+}
+
+/* Settings panel */
+.settings-panel[hidden] {
+  display: none;
+}
+
+.settings-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.settings-panel__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.settings-panel__content {
+  position: relative;
+  width: 360px;
+  max-width: 100%;
+  height: 100%;
+  background: var(--bg-surface);
+  border-left: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  animation: settings-slide 0.25s ease;
+}
+
+@keyframes settings-slide {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.settings-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg) var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.settings-panel__header h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.settings-panel__body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.settings-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.settings-select {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 14px;
+  cursor: pointer;
+  appearance: auto;
+}
+
+.settings-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.settings-input {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.settings-input:focus {
+  border-color: var(--border-active);
+}
+
+.settings-lang-toggle {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.lang-btn {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 13px;
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  border: 2px solid transparent;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background: var(--bg-hover);
+}
+
+.lang-btn--active {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  background: rgba(59, 138, 240, 0.1);
+}
+
+.settings-api {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: var(--accent-green);
+}
+
+.api-key-group {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.api-key-group[hidden] {
+  display: none;
+}
+
+.settings-actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.settings-footer {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+  font-size: 12px;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .settings-panel__content {
+    width: 100%;
+  }
+}

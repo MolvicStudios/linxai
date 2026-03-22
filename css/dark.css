@@ -1,0 +1,27 @@
+/* dark.css — Dark theme (default & only theme for v1) */
+/* All colors are already defined as dark in tokens.css */
+/* This file is reserved for future light theme overrides */
+
+/* Ensure proper dark styling on form elements */
+select option {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+/* Focus rings */
+:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+  border-color: var(--border-active);
+}

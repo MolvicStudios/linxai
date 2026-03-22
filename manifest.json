@@ -1,0 +1,17 @@
+{
+  "name": "LinxAI — Tu guía en Linux",
+  "short_name": "LinxAI",
+  "description": "Asistente IA para aprender Linux. Tu copiloto en la terminal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0F14",
+  "theme_color": "#00FF88",
+  "orientation": "any",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "categories": ["productivity", "utilities", "education"],
+  "lang": "es",
+  "dir": "ltr"
+}

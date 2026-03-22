@@ -1,0 +1,105 @@
+{
+  "categorias": [
+    {
+      "id": "navegacion",
+      "nombre_es": "Navegación de archivos",
+      "nombre_en": "File navigation",
+      "comandos": [
+        { "cmd": "ls", "desc_es": "Lista archivos del directorio actual", "desc_en": "List files in current directory", "equivalente_windows": "dir", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "ls -la", "desc_es": "Lista todos los archivos con detalles y ocultos", "desc_en": "List all files with details including hidden", "equivalente_windows": "dir /a", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "cd /ruta", "desc_es": "Cambia al directorio especificado", "desc_en": "Change to specified directory", "equivalente_windows": "cd \\ruta", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "cd ~", "desc_es": "Va al directorio home del usuario", "desc_en": "Go to user's home directory", "equivalente_windows": "cd %USERPROFILE%", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "cd ..", "desc_es": "Sube un nivel en el directorio", "desc_en": "Go up one directory level", "equivalente_windows": "cd ..", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "pwd", "desc_es": "Muestra el directorio actual", "desc_en": "Print working directory", "equivalente_windows": "cd (sin parámetros)", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "mkdir nombre", "desc_es": "Crea un directorio nuevo", "desc_en": "Create a new directory", "equivalente_windows": "mkdir nombre", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "mkdir -p ruta/sub/dir", "desc_es": "Crea directorios y subdirectorios", "desc_en": "Create nested directories", "equivalente_windows": "mkdir ruta\\sub\\dir", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "rmdir nombre", "desc_es": "Elimina un directorio vacío", "desc_en": "Remove an empty directory", "equivalente_windows": "rmdir nombre", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "cp archivo destino", "desc_es": "Copia un archivo", "desc_en": "Copy a file", "equivalente_windows": "copy archivo destino", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "cp -r dir destino", "desc_es": "Copia un directorio completo", "desc_en": "Copy a directory recursively", "equivalente_windows": "xcopy dir destino /s /e", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "mv origen destino", "desc_es": "Mueve o renombra archivos", "desc_en": "Move or rename files", "equivalente_windows": "move origen destino", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "rm archivo", "desc_es": "Elimina un archivo", "desc_en": "Delete a file", "equivalente_windows": "del archivo", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "cat archivo", "desc_es": "Muestra el contenido de un archivo", "desc_en": "Show file contents", "equivalente_windows": "type archivo", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "less archivo", "desc_es": "Ver archivo con paginación", "desc_en": "View file with pagination", "equivalente_windows": "more archivo", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "head -n 10 archivo", "desc_es": "Muestra las 10 primeras líneas", "desc_en": "Show first 10 lines", "equivalente_windows": "N/A", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "tail -n 10 archivo", "desc_es": "Muestra las últimas 10 líneas", "desc_en": "Show last 10 lines", "equivalente_windows": "N/A", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "find /ruta -name '*.txt'", "desc_es": "Busca archivos por nombre", "desc_en": "Find files by name", "equivalente_windows": "dir /s *.txt", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "tree", "desc_es": "Muestra la estructura de directorios en árbol", "desc_en": "Show directory tree structure", "equivalente_windows": "tree", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "du -sh directorio", "desc_es": "Muestra el tamaño de un directorio", "desc_en": "Show directory size", "equivalente_windows": "N/A", "peligroso": false, "distros": ["ubuntu", "arch"] }
+      ]
+    },
+    {
+      "id": "paquetes_ubuntu",
+      "nombre_es": "Gestión de paquetes (Ubuntu/Mint)",
+      "nombre_en": "Package management (Ubuntu/Mint)",
+      "comandos": [
+        { "cmd": "sudo apt update", "desc_es": "Actualiza la lista de paquetes disponibles", "desc_en": "Update available package list", "equivalente_windows": "winget source update", "peligroso": false, "distros": ["ubuntu"] },
+        { "cmd": "sudo apt upgrade", "desc_es": "Actualiza todos los paquetes instalados", "desc_en": "Upgrade all installed packages", "equivalente_windows": "Windows Update", "peligroso": false, "distros": ["ubuntu"] },
+        { "cmd": "sudo apt install paquete", "desc_es": "Instala un paquete", "desc_en": "Install a package", "equivalente_windows": "winget install paquete", "peligroso": false, "distros": ["ubuntu"] },
+        { "cmd": "sudo apt remove paquete", "desc_es": "Desinstala un paquete", "desc_en": "Remove a package", "equivalente_windows": "winget uninstall paquete", "peligroso": false, "distros": ["ubuntu"] },
+        { "cmd": "sudo apt autoremove", "desc_es": "Elimina dependencias que ya no se necesitan", "desc_en": "Remove unnecessary dependencies", "equivalente_windows": "N/A", "peligroso": false, "distros": ["ubuntu"] },
+        { "cmd": "apt search nombre", "desc_es": "Busca paquetes por nombre", "desc_en": "Search packages by name", "equivalente_windows": "winget search nombre", "peligroso": false, "distros": ["ubuntu"] },
+        { "cmd": "apt show paquete", "desc_es": "Muestra información de un paquete", "desc_en": "Show package information", "equivalente_windows": "winget show paquete", "peligroso": false, "distros": ["ubuntu"] },
+        { "cmd": "dpkg -l", "desc_es": "Lista todos los paquetes instalados", "desc_en": "List all installed packages", "equivalente_windows": "winget list", "peligroso": false, "distros": ["ubuntu"] },
+        { "cmd": "sudo apt full-upgrade", "desc_es": "Actualización completa con resolución de dependencias", "desc_en": "Full upgrade with dependency resolution", "equivalente_windows": "Windows Update", "peligroso": false, "distros": ["ubuntu"] },
+        { "cmd": "sudo add-apt-repository ppa:nombre", "desc_es": "Añade un repositorio PPA", "desc_en": "Add a PPA repository", "equivalente_windows": "N/A", "peligroso": false, "distros": ["ubuntu"] }
+      ]
+    },
+    {
+      "id": "paquetes_arch",
+      "nombre_es": "Gestión de paquetes (Arch/Manjaro)",
+      "nombre_en": "Package management (Arch/Manjaro)",
+      "comandos": [
+        { "cmd": "sudo pacman -Syu", "desc_es": "Actualiza todo el sistema", "desc_en": "Update entire system", "equivalente_windows": "Windows Update", "peligroso": false, "distros": ["arch"] },
+        { "cmd": "sudo pacman -S paquete", "desc_es": "Instala un paquete", "desc_en": "Install a package", "equivalente_windows": "winget install paquete", "peligroso": false, "distros": ["arch"] },
+        { "cmd": "sudo pacman -Rs paquete", "desc_es": "Desinstala paquete y dependencias huérfanas", "desc_en": "Remove package and orphan dependencies", "equivalente_windows": "winget uninstall paquete", "peligroso": false, "distros": ["arch"] },
+        { "cmd": "pacman -Ss nombre", "desc_es": "Busca paquetes en los repositorios", "desc_en": "Search packages in repositories", "equivalente_windows": "winget search nombre", "peligroso": false, "distros": ["arch"] },
+        { "cmd": "pacman -Qi paquete", "desc_es": "Info detallada de un paquete instalado", "desc_en": "Detailed info of installed package", "equivalente_windows": "winget show paquete", "peligroso": false, "distros": ["arch"] },
+        { "cmd": "pacman -Q", "desc_es": "Lista todos los paquetes instalados", "desc_en": "List all installed packages", "equivalente_windows": "winget list", "peligroso": false, "distros": ["arch"] },
+        { "cmd": "yay -S paquete", "desc_es": "Instala desde AUR (requiere yay)", "desc_en": "Install from AUR (requires yay)", "equivalente_windows": "N/A", "peligroso": false, "distros": ["arch"] },
+        { "cmd": "sudo pacman -Sc", "desc_es": "Limpia caché de paquetes descargados", "desc_en": "Clean package cache", "equivalente_windows": "N/A", "peligroso": false, "distros": ["arch"] },
+        { "cmd": "pacman -Qdt", "desc_es": "Lista paquetes huérfanos", "desc_en": "List orphan packages", "equivalente_windows": "N/A", "peligroso": false, "distros": ["arch"] },
+        { "cmd": "sudo pacman -Rns $(pacman -Qdtq)", "desc_es": "Elimina todos los paquetes huérfanos", "desc_en": "Remove all orphan packages", "equivalente_windows": "N/A", "peligroso": false, "distros": ["arch"] }
+      ]
+    },
+    {
+      "id": "sistema",
+      "nombre_es": "Sistema y procesos",
+      "nombre_en": "System and processes",
+      "comandos": [
+        { "cmd": "htop", "desc_es": "Monitor de procesos interactivo", "desc_en": "Interactive process monitor", "equivalente_windows": "Administrador de tareas", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "ps aux", "desc_es": "Lista todos los procesos activos", "desc_en": "List all active processes", "equivalente_windows": "tasklist", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "kill PID", "desc_es": "Termina un proceso por su ID", "desc_en": "Kill a process by ID", "equivalente_windows": "taskkill /PID número", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "killall nombre", "desc_es": "Termina todos los procesos con ese nombre", "desc_en": "Kill all processes with that name", "equivalente_windows": "taskkill /IM nombre", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "df -h", "desc_es": "Muestra espacio en disco", "desc_en": "Show disk space", "equivalente_windows": "wmic logicaldisk get size,freespace", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "free -h", "desc_es": "Muestra uso de memoria RAM", "desc_en": "Show RAM usage", "equivalente_windows": "systeminfo", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "uname -a", "desc_es": "Información del kernel y sistema", "desc_en": "Kernel and system info", "equivalente_windows": "systeminfo", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "uptime", "desc_es": "Tiempo encendido del sistema", "desc_en": "System uptime", "equivalente_windows": "systeminfo | find 'Boot Time'", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "whoami", "desc_es": "Muestra tu nombre de usuario", "desc_en": "Show your username", "equivalente_windows": "whoami", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "sudo reboot", "desc_es": "Reinicia el sistema", "desc_en": "Reboot the system", "equivalente_windows": "shutdown /r", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "sudo shutdown -h now", "desc_es": "Apaga el sistema", "desc_en": "Shutdown the system", "equivalente_windows": "shutdown /s", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "chmod +x archivo", "desc_es": "Da permisos de ejecución a un archivo", "desc_en": "Add execute permission to file", "equivalente_windows": "N/A", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "chown usuario:grupo archivo", "desc_es": "Cambia dueño y grupo de un archivo", "desc_en": "Change file owner and group", "equivalente_windows": "N/A", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "systemctl status servicio", "desc_es": "Ver estado de un servicio", "desc_en": "Check service status", "equivalente_windows": "sc query servicio", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "systemctl start servicio", "desc_es": "Inicia un servicio", "desc_en": "Start a service", "equivalente_windows": "net start servicio", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "journalctl -xe", "desc_es": "Ver logs del sistema recientes", "desc_en": "View recent system logs", "equivalente_windows": "eventvwr", "peligroso": false, "distros": ["ubuntu", "arch"] }
+      ]
+    },
+    {
+      "id": "red",
+      "nombre_es": "Red",
+      "nombre_en": "Network",
+      "comandos": [
+        { "cmd": "ip a", "desc_es": "Muestra todas las interfaces de red", "desc_en": "Show all network interfaces", "equivalente_windows": "ipconfig", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "ping -c 4 google.com", "desc_es": "Prueba conectividad con 4 paquetes", "desc_en": "Test connectivity with 4 packets", "equivalente_windows": "ping google.com", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "curl -I https://ejemplo.com", "desc_es": "Obtiene encabezados HTTP", "desc_en": "Get HTTP headers", "equivalente_windows": "N/A", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "wget url", "desc_es": "Descarga un archivo de internet", "desc_en": "Download a file from the internet", "equivalente_windows": "N/A", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "ss -tulnp", "desc_es": "Lista puertos abiertos y servicios", "desc_en": "List open ports and services", "equivalente_windows": "netstat -an", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "nmcli dev wifi list", "desc_es": "Lista redes WiFi disponibles", "desc_en": "List available WiFi networks", "equivalente_windows": "netsh wlan show networks", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "nmcli dev wifi connect SSID password PASS", "desc_es": "Conecta a una red WiFi", "desc_en": "Connect to a WiFi network", "equivalente_windows": "netsh wlan connect name=SSID", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "traceroute google.com", "desc_es": "Traza la ruta hacia un servidor", "desc_en": "Trace route to a server", "equivalente_windows": "tracert google.com", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "dig dominio.com", "desc_es": "Consulta DNS de un dominio", "desc_en": "DNS lookup for a domain", "equivalente_windows": "nslookup dominio.com", "peligroso": false, "distros": ["ubuntu", "arch"] },
+        { "cmd": "sudo ufw enable", "desc_es": "Activa el firewall (UFW)", "desc_en": "Enable firewall (UFW)", "equivalente_windows": "netsh advfirewall set allprofiles state on", "peligroso": false, "distros": ["ubuntu"] }
+      ]
+    }
+  ]
+}

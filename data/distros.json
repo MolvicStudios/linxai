@@ -1,0 +1,44 @@
+{
+  "ubuntu": {
+    "nombre": "Ubuntu",
+    "variantes": ["Ubuntu", "Linux Mint", "Ubuntu Studio"],
+    "gestor_paquetes": "apt",
+    "base": "debian",
+    "color": "#E95420",
+    "descripcion_es": "La distribución más popular para principiantes. Basada en Debian, con gran comunidad y soporte.",
+    "descripcion_en": "The most popular distro for beginners. Debian-based with huge community support.",
+    "equivalencias_windows": {
+      "Panel de Control": "Configuración del sistema (gnome-control-center)",
+      "Explorador de archivos": "Nautilus / Thunar",
+      "Administrador de tareas": "htop / gnome-system-monitor",
+      "Instalar programas": "apt install / Software Center",
+      "CMD / PowerShell": "Terminal (bash)",
+      "Registro de Windows": "dconf / gsettings",
+      "Windows Update": "sudo apt update && sudo apt upgrade",
+      "Desinstalar programas": "sudo apt remove nombre-paquete",
+      "Bloc de notas": "gedit / nano / vim",
+      "Paint": "GIMP / Drawing"
+    }
+  },
+  "arch": {
+    "nombre": "Arch Linux",
+    "variantes": ["Arch Linux", "Manjaro", "EndeavourOS"],
+    "gestor_paquetes": "pacman",
+    "base": "arch",
+    "color": "#1793D1",
+    "descripcion_es": "Distribución rolling release para usuarios que quieren control total.",
+    "descripcion_en": "Rolling release distro for users who want full control.",
+    "equivalencias_windows": {
+      "Panel de Control": "Configuración del sistema",
+      "Instalar programas": "pacman -S / yay (AUR)",
+      "Actualizar todo": "pacman -Syu",
+      "Administrador de tareas": "htop / btop",
+      "CMD / PowerShell": "Terminal (bash/zsh)",
+      "Registro de Windows": "dconf / gsettings",
+      "Windows Update": "sudo pacman -Syu",
+      "Desinstalar programas": "sudo pacman -Rs nombre-paquete",
+      "Bloc de notas": "nano / vim / kate",
+      "Paint": "GIMP / Drawing"
+    }
+  }
+}
