@@ -1,0 +1,579 @@
+{
+  "categorias": [
+    { "id": "sistema", "label_es": "Sistema", "label_en": "System" },
+    { "id": "paquetes", "label_es": "Paquetes", "label_en": "Packages" },
+    { "id": "archivos", "label_es": "Archivos", "label_en": "Files" },
+    { "id": "mantenimiento", "label_es": "Mantenimiento", "label_en": "Maintenance" },
+    { "id": "seguridad", "label_es": "Seguridad", "label_en": "Security" },
+    { "id": "redes", "label_es": "Redes", "label_en": "Networking" },
+    { "id": "multimedia", "label_es": "Multimedia", "label_en": "Multimedia" }
+  ],
+  "terminos": [
+    {
+      "windows": "Panel de Control",
+      "windows_en": "Control Panel",
+      "linux_general": "Configuración del sistema",
+      "linux_general_en": "System Settings",
+      "por_distro": {
+        "ubuntu": "gnome-control-center",
+        "mint": "Configuración del sistema (Cinnamon Settings)",
+        "popos": "gnome-control-center (COSMIC Settings)",
+        "fedora": "gnome-control-center",
+        "opensuse": "YaST — mucho más potente que el Panel de Control",
+        "elementary": "Configuración del sistema (Pantheon)",
+        "manjaro": "Depende del escritorio (KDE: systemsettings)",
+        "arch": "Depende del escritorio instalado"
+      },
+      "categoria": "sistema",
+      "cmd": "gnome-control-center"
+    },
+    {
+      "windows": "Explorador de archivos",
+      "windows_en": "File Explorer",
+      "linux_general": "Gestor de archivos",
+      "linux_general_en": "File Manager",
+      "por_distro": {
+        "ubuntu": "Nautilus (Files)",
+        "mint": "Nemo",
+        "popos": "Nautilus",
+        "fedora": "Nautilus",
+        "opensuse": "Dolphin (KDE) o Nautilus (GNOME)",
+        "elementary": "Pantheon Files",
+        "manjaro": "Thunar o Dolphin según escritorio",
+        "arch": "Depende del escritorio"
+      },
+      "categoria": "sistema"
+    },
+    {
+      "windows": "Administrador de tareas",
+      "windows_en": "Task Manager",
+      "linux_general": "Monitor del sistema / htop",
+      "linux_general_en": "System Monitor / htop",
+      "por_distro": {
+        "ubuntu": "Monitor del sistema GNOME o htop en terminal",
+        "mint": "Monitor del sistema o htop",
+        "popos": "Monitor del sistema GNOME o htop",
+        "fedora": "Monitor del sistema GNOME",
+        "opensuse": "Monitor del sistema KDE o htop",
+        "elementary": "Monitor del sistema",
+        "manjaro": "htop o Monitor del sistema",
+        "arch": "htop / btop"
+      },
+      "categoria": "sistema",
+      "cmd": "htop"
+    },
+    {
+      "windows": "Símbolo del sistema / CMD",
+      "windows_en": "Command Prompt / CMD",
+      "linux_general": "Terminal",
+      "linux_general_en": "Terminal",
+      "por_distro": {
+        "ubuntu": "GNOME Terminal (Ctrl+Alt+T)",
+        "mint": "xfce4-terminal o GNOME Terminal",
+        "popos": "GNOME Terminal (Ctrl+Alt+T)",
+        "fedora": "GNOME Terminal (Ctrl+Alt+T)",
+        "opensuse": "Konsole (KDE) o GNOME Terminal",
+        "elementary": "Pantheon Terminal",
+        "manjaro": "Konsole (KDE) o xfce4-terminal",
+        "arch": "Depende del escritorio"
+      },
+      "categoria": "sistema"
+    },
+    {
+      "windows": "PowerShell",
+      "windows_en": "PowerShell",
+      "linux_general": "Bash / Zsh",
+      "linux_general_en": "Bash / Zsh",
+      "descripcion_es": "Bash es el shell por defecto en la mayoría de distros. Zsh es una alternativa popular con más funciones. Fish es otra opción amigable.",
+      "descripcion_en": "Bash is the default shell in most distros. Zsh is a popular alternative with more features. Fish is another friendly option.",
+      "categoria": "sistema"
+    },
+    {
+      "windows": "Instalar programas (.exe)",
+      "windows_en": "Install programs (.exe)",
+      "linux_general": "Gestor de paquetes",
+      "linux_general_en": "Package Manager",
+      "por_distro": {
+        "ubuntu": "apt install o Ubuntu Software Center",
+        "mint": "apt install o Software Manager",
+        "popos": "apt install o Pop!_Shop",
+        "fedora": "dnf install o GNOME Software",
+        "opensuse": "zypper install o YaST Software",
+        "elementary": "apt install o AppCenter",
+        "manjaro": "pacman -S o Pamac",
+        "arch": "pacman -S"
+      },
+      "categoria": "paquetes"
+    },
+    {
+      "windows": "Microsoft Store",
+      "windows_en": "Microsoft Store",
+      "linux_general": "Tienda de software / Flatpak / Snap",
+      "linux_general_en": "Software Store / Flatpak / Snap",
+      "descripcion_es": "Cada distro tiene su tienda gráfica. Flatpak (flathub.org) y Snap son tiendas universales que funcionan en todas las distros.",
+      "descripcion_en": "Each distro has its graphical store. Flatpak (flathub.org) and Snap are universal stores that work on all distros.",
+      "categoria": "paquetes"
+    },
+    {
+      "windows": "Actualizar Windows",
+      "windows_en": "Windows Update",
+      "linux_general": "Actualizar el sistema",
+      "linux_general_en": "Update the system",
+      "por_distro": {
+        "ubuntu": "sudo apt update && sudo apt upgrade",
+        "mint": "sudo apt update && sudo apt upgrade",
+        "popos": "sudo apt update && sudo apt upgrade",
+        "fedora": "sudo dnf upgrade",
+        "opensuse": "sudo zypper update",
+        "elementary": "sudo apt update && sudo apt upgrade",
+        "manjaro": "sudo pacman -Syu",
+        "arch": "sudo pacman -Syu"
+      },
+      "categoria": "paquetes"
+    },
+    {
+      "windows": "Desinstalar programas",
+      "windows_en": "Uninstall programs",
+      "linux_general": "Eliminar paquetes",
+      "linux_general_en": "Remove packages",
+      "por_distro": {
+        "ubuntu": "sudo apt remove nombre-paquete",
+        "mint": "sudo apt remove nombre-paquete",
+        "popos": "sudo apt remove nombre-paquete",
+        "fedora": "sudo dnf remove nombre-paquete",
+        "opensuse": "sudo zypper remove nombre-paquete",
+        "elementary": "sudo apt remove nombre-paquete",
+        "manjaro": "sudo pacman -Rs nombre-paquete",
+        "arch": "sudo pacman -Rs nombre-paquete"
+      },
+      "categoria": "paquetes"
+    },
+    {
+      "windows": "Registro de Windows",
+      "windows_en": "Windows Registry",
+      "linux_general": "Archivos de configuración en /etc y ~/.config",
+      "linux_general_en": "Configuration files in /etc and ~/.config",
+      "descripcion_es": "En Linux no hay un registro centralizado. La configuración del sistema está en /etc/ y la del usuario en ~/.config/ y archivos ocultos en tu home.",
+      "descripcion_en": "In Linux there's no centralized registry. System config is in /etc/ and user config in ~/.config/ and hidden files in your home.",
+      "categoria": "sistema"
+    },
+    {
+      "windows": "Mis Documentos",
+      "windows_en": "My Documents",
+      "linux_general": "~/Documentos o ~/Documents",
+      "linux_general_en": "~/Documents",
+      "descripcion_es": "En Linux los archivos personales están en /home/tuusuario/ (abreviado como ~). Dentro encontrarás Documentos, Descargas, Imágenes, etc.",
+      "descripcion_en": "In Linux personal files are in /home/yourusername/ (abbreviated as ~). Inside you'll find Documents, Downloads, Pictures, etc.",
+      "categoria": "archivos"
+    },
+    {
+      "windows": "C:\\ (disco principal)",
+      "windows_en": "C:\\ (main drive)",
+      "linux_general": "/ (directorio raíz)",
+      "linux_general_en": "/ (root directory)",
+      "descripcion_es": "En Linux no hay letras de unidad. Todo parte del directorio raíz /. Tu disco principal está montado en / y los externos en /media/ o /mnt/.",
+      "descripcion_en": "In Linux there are no drive letters. Everything starts from the root directory /. Your main drive is mounted at / and external ones at /media/ or /mnt/.",
+      "categoria": "archivos"
+    },
+    {
+      "windows": "D:\\, E:\\ (otros discos)",
+      "windows_en": "D:\\, E:\\ (other drives)",
+      "linux_general": "/media/ o /mnt/",
+      "linux_general_en": "/media/ or /mnt/",
+      "descripcion_es": "Los discos y USBs se montan automáticamente en /media/tuusuario/. Los montajes manuales suelen ir en /mnt/.",
+      "descripcion_en": "Drives and USBs are automatically mounted in /media/yourusername/. Manual mounts usually go in /mnt/.",
+      "categoria": "archivos"
+    },
+    {
+      "windows": "Papelera de reciclaje",
+      "windows_en": "Recycle Bin",
+      "linux_general": "~/.local/share/Trash",
+      "linux_general_en": "~/.local/share/Trash",
+      "descripcion_es": "La papelera en Linux está en ~/.local/share/Trash. Desde terminal, rm elimina sin pasar por papelera — usa la papelera del gestor de archivos si quieres recuperar archivos.",
+      "descripcion_en": "The trash in Linux is at ~/.local/share/Trash. From terminal, rm deletes without going through trash — use the file manager trash if you want to recover files.",
+      "categoria": "archivos"
+    },
+    {
+      "windows": "Archivos ocultos",
+      "windows_en": "Hidden files",
+      "linux_general": "Archivos que empiezan por . (punto)",
+      "linux_general_en": "Files starting with . (dot)",
+      "descripcion_es": "En Linux, un archivo es oculto si su nombre empieza por punto: .bashrc, .config, etc. Para verlos: ls -a o Ctrl+H en el gestor de archivos.",
+      "descripcion_en": "In Linux, a file is hidden if its name starts with a dot: .bashrc, .config, etc. To see them: ls -a or Ctrl+H in the file manager.",
+      "categoria": "archivos"
+    },
+    {
+      "windows": "Desfragmentar disco",
+      "windows_en": "Defragment disk",
+      "linux_general": "No necesario en Linux",
+      "linux_general_en": "Not needed in Linux",
+      "descripcion_es": "Los sistemas de archivos de Linux (ext4, btrfs) no necesitan desfragmentación. Para SSDs, el TRIM se activa automáticamente.",
+      "descripcion_en": "Linux file systems (ext4, btrfs) don't need defragmentation. For SSDs, TRIM is enabled automatically.",
+      "categoria": "mantenimiento"
+    },
+    {
+      "windows": "Liberar espacio en disco",
+      "windows_en": "Disk Cleanup",
+      "linux_general": "Limpiar caché de paquetes",
+      "linux_general_en": "Clean package cache",
+      "por_distro": {
+        "ubuntu": "sudo apt autoremove && sudo apt clean",
+        "mint": "sudo apt autoremove && sudo apt clean",
+        "popos": "sudo apt autoremove && sudo apt clean",
+        "fedora": "sudo dnf autoremove && sudo dnf clean all",
+        "opensuse": "sudo zypper clean",
+        "manjaro": "sudo pacman -Sc",
+        "arch": "sudo pacman -Sc"
+      },
+      "categoria": "mantenimiento"
+    },
+    {
+      "windows": "Antivirus",
+      "windows_en": "Antivirus",
+      "linux_general": "Generalmente no necesario",
+      "linux_general_en": "Generally not needed",
+      "descripcion_es": "Linux tiene muy pocos virus. No necesitas antivirus para uso normal. ClamAV existe si lo necesitas para escanear archivos de Windows compartidos.",
+      "descripcion_en": "Linux has very few viruses. You don't need antivirus for normal use. ClamAV exists if you need to scan shared Windows files.",
+      "categoria": "seguridad"
+    },
+    {
+      "windows": "Firewall de Windows",
+      "windows_en": "Windows Firewall",
+      "linux_general": "ufw (Uncomplicated Firewall)",
+      "linux_general_en": "ufw (Uncomplicated Firewall)",
+      "cmd": "sudo ufw enable",
+      "descripcion_es": "ufw es el firewall más fácil de usar. Viene preinstalado en Ubuntu. Para activarlo: sudo ufw enable",
+      "descripcion_en": "ufw is the easiest firewall to use. Comes pre-installed on Ubuntu. To enable: sudo ufw enable",
+      "categoria": "seguridad"
+    },
+    {
+      "windows": "Modo administrador / UAC",
+      "windows_en": "Administrator / UAC",
+      "linux_general": "sudo",
+      "linux_general_en": "sudo",
+      "descripcion_es": "sudo (Super User DO) es el equivalente al 'Ejecutar como administrador'. Se pone delante del comando que necesita permisos: sudo apt install programa",
+      "descripcion_en": "sudo (Super User DO) is the equivalent of 'Run as Administrator'. Place it before any command that needs permissions: sudo apt install program",
+      "categoria": "seguridad",
+      "cmd": "sudo comando"
+    },
+    {
+      "windows": "Programas de inicio",
+      "windows_en": "Startup Programs",
+      "linux_general": "Aplicaciones de inicio / autostart",
+      "linux_general_en": "Startup Applications / autostart",
+      "por_distro": {
+        "ubuntu": "gnome-tweaks → Aplicaciones de inicio",
+        "mint": "Menú → Preferencias → Aplicaciones de inicio",
+        "popos": "gnome-tweaks → Aplicaciones de inicio",
+        "fedora": "gnome-tweaks → Aplicaciones de inicio",
+        "opensuse": "YaST → Servicios del sistema",
+        "elementary": "Configuración → Aplicaciones → Inicio",
+        "manjaro": "Depende del escritorio",
+        "arch": "~/.config/autostart/ o systemctl enable"
+      },
+      "categoria": "sistema"
+    },
+    {
+      "windows": "WiFi / Red",
+      "windows_en": "WiFi / Network",
+      "linux_general": "NetworkManager",
+      "linux_general_en": "NetworkManager",
+      "descripcion_es": "NetworkManager gestiona todas las conexiones de red. Haz clic en el icono de red en la barra superior para conectar a WiFi.",
+      "descripcion_en": "NetworkManager manages all network connections. Click the network icon in the top bar to connect to WiFi.",
+      "categoria": "redes",
+      "cmd": "nmcli"
+    },
+    {
+      "windows": "Dirección IP",
+      "windows_en": "IP Address",
+      "linux_general": "ip addr o hostname -I",
+      "linux_general_en": "ip addr or hostname -I",
+      "descripcion_es": "En Windows usas ipconfig. En Linux el equivalente es: ip addr show o hostname -I para solo ver la IP.",
+      "descripcion_en": "On Windows you use ipconfig. On Linux the equivalent is: ip addr show or hostname -I to just see the IP.",
+      "categoria": "redes",
+      "cmd": "ip addr show"
+    },
+    {
+      "windows": "Bloc de notas",
+      "windows_en": "Notepad",
+      "linux_general": "gedit / nano / Kate",
+      "linux_general_en": "gedit / nano / Kate",
+      "por_distro": {
+        "ubuntu": "gedit (GNOME Text Editor)",
+        "mint": "xed",
+        "popos": "gedit",
+        "fedora": "GNOME Text Editor",
+        "opensuse": "Kate (KDE) o gedit",
+        "elementary": "Code (editor propio)",
+        "manjaro": "Kate o mousepad",
+        "arch": "nano, vim, o el que instales"
+      },
+      "categoria": "sistema"
+    },
+    {
+      "windows": "Paint",
+      "windows_en": "Paint",
+      "linux_general": "GIMP / Drawing / Pinta",
+      "linux_general_en": "GIMP / Drawing / Pinta",
+      "descripcion_es": "Drawing es como Paint. GIMP es como Photoshop. Pinta es un Paint con más funciones. Krita para dibujo digital.",
+      "descripcion_en": "Drawing is like Paint. GIMP is like Photoshop. Pinta is Paint with more features. Krita for digital drawing.",
+      "categoria": "multimedia"
+    },
+    {
+      "windows": "Reproductor de Windows / Groove",
+      "windows_en": "Windows Media Player / Groove",
+      "linux_general": "VLC / Rhythmbox / Celluloid",
+      "linux_general_en": "VLC / Rhythmbox / Celluloid",
+      "descripcion_es": "VLC reproduce cualquier formato. Rhythmbox es un gestor de música. Celluloid es un reproductor de vídeo minimalista.",
+      "descripcion_en": "VLC plays any format. Rhythmbox is a music manager. Celluloid is a minimalist video player.",
+      "categoria": "multimedia"
+    },
+    {
+      "windows": "Microsoft Office",
+      "windows_en": "Microsoft Office",
+      "linux_general": "LibreOffice / OnlyOffice",
+      "linux_general_en": "LibreOffice / OnlyOffice",
+      "descripcion_es": "LibreOffice viene preinstalado en la mayoría de distros. Es compatible con .docx, .xlsx, .pptx. OnlyOffice tiene mejor compatibilidad con formatos Microsoft.",
+      "descripcion_en": "LibreOffice comes pre-installed in most distros. Compatible with .docx, .xlsx, .pptx. OnlyOffice has better Microsoft format compatibility.",
+      "categoria": "sistema"
+    },
+    {
+      "windows": "Outlook",
+      "windows_en": "Outlook",
+      "linux_general": "Thunderbird / Evolution",
+      "linux_general_en": "Thunderbird / Evolution",
+      "descripcion_es": "Thunderbird es el cliente de correo más popular en Linux. Evolution integra bien con cuentas de Exchange/Office 365.",
+      "descripcion_en": "Thunderbird is the most popular email client on Linux. Evolution integrates well with Exchange/Office 365 accounts.",
+      "categoria": "sistema"
+    },
+    {
+      "windows": "Adobe Photoshop",
+      "windows_en": "Adobe Photoshop",
+      "linux_general": "GIMP / Krita",
+      "linux_general_en": "GIMP / Krita",
+      "descripcion_es": "GIMP es la alternativa libre a Photoshop. Krita está más orientado a ilustración digital. Photopea (web) funciona en el navegador.",
+      "descripcion_en": "GIMP is the free alternative to Photoshop. Krita is more oriented to digital illustration. Photopea (web) works in the browser.",
+      "categoria": "multimedia"
+    },
+    {
+      "windows": "Adobe Premiere",
+      "windows_en": "Adobe Premiere",
+      "linux_general": "Kdenlive / DaVinci Resolve / Shotcut",
+      "linux_general_en": "Kdenlive / DaVinci Resolve / Shotcut",
+      "descripcion_es": "Kdenlive y Shotcut son libres. DaVinci Resolve tiene versión gratuita profesional para Linux.",
+      "descripcion_en": "Kdenlive and Shotcut are free. DaVinci Resolve has a professional free version for Linux.",
+      "categoria": "multimedia"
+    },
+    {
+      "windows": "Discord",
+      "windows_en": "Discord",
+      "linux_general": "Discord (nativo) / Vesktop",
+      "linux_general_en": "Discord (native) / Vesktop",
+      "descripcion_es": "Discord tiene app nativa para Linux (.deb y .tar.gz). También disponible como Flatpak. Vesktop es una alternativa con mejor integración.",
+      "descripcion_en": "Discord has a native Linux app (.deb and .tar.gz). Also available as Flatpak. Vesktop is an alternative with better integration.",
+      "categoria": "sistema"
+    },
+    {
+      "windows": "Spotify",
+      "windows_en": "Spotify",
+      "linux_general": "Spotify (nativo) / Flatpak / Snap",
+      "linux_general_en": "Spotify (native) / Flatpak / Snap",
+      "descripcion_es": "Spotify tiene cliente nativo para Linux. Instálalo desde Snap, Flatpak o el repositorio oficial.",
+      "descripcion_en": "Spotify has a native Linux client. Install it from Snap, Flatpak or the official repository.",
+      "categoria": "multimedia"
+    },
+    {
+      "windows": "Visual Studio Code",
+      "windows_en": "Visual Studio Code",
+      "linux_general": "VS Code / VS Codium",
+      "linux_general_en": "VS Code / VS Codium",
+      "descripcion_es": "VS Code funciona nativamente en Linux (.deb, .rpm, Flatpak). VS Codium es la versión sin telemetría de Microsoft.",
+      "descripcion_en": "VS Code works natively on Linux (.deb, .rpm, Flatpak). VS Codium is the version without Microsoft telemetry.",
+      "categoria": "sistema"
+    },
+    {
+      "windows": "Git Bash",
+      "windows_en": "Git Bash",
+      "linux_general": "Git (nativo en terminal)",
+      "linux_general_en": "Git (native in terminal)",
+      "descripcion_es": "No necesitas Git Bash — git funciona directamente en la terminal de Linux. Instálalo con tu gestor de paquetes.",
+      "descripcion_en": "You don't need Git Bash — git works directly in the Linux terminal. Install it with your package manager.",
+      "categoria": "sistema",
+      "cmd": "git"
+    },
+    {
+      "windows": "WSL (Windows Subsystem for Linux)",
+      "windows_en": "WSL (Windows Subsystem for Linux)",
+      "linux_general": "¡Ya estás en Linux!",
+      "linux_general_en": "You're already on Linux!",
+      "descripcion_es": "WSL era la forma de usar Linux dentro de Windows. Ahora que estás en Linux nativo, tienes acceso completo sin capas de compatibilidad.",
+      "descripcion_en": "WSL was the way to use Linux inside Windows. Now that you're on native Linux, you have full access without compatibility layers.",
+      "categoria": "sistema"
+    },
+    {
+      "windows": "Impresoras",
+      "windows_en": "Printers",
+      "linux_general": "CUPS (sistema de impresión)",
+      "linux_general_en": "CUPS (printing system)",
+      "descripcion_es": "CUPS gestiona las impresoras en Linux. La mayoría se detectan automáticamente. Configura en Configuración → Impresoras o en localhost:631.",
+      "descripcion_en": "CUPS manages printers on Linux. Most are detected automatically. Configure in Settings → Printers or at localhost:631.",
+      "categoria": "sistema",
+      "cmd": "system-config-printer"
+    },
+    {
+      "windows": "Bluetooth",
+      "windows_en": "Bluetooth",
+      "linux_general": "bluez / blueman",
+      "linux_general_en": "bluez / blueman",
+      "descripcion_es": "Bluetooth funciona desde la configuración del sistema. Si tienes problemas, instala blueman para un gestor gráfico más potente.",
+      "descripcion_en": "Bluetooth works from system settings. If you have issues, install blueman for a more powerful graphical manager.",
+      "categoria": "redes",
+      "cmd": "bluetoothctl"
+    },
+    {
+      "windows": "Herramienta de recortes",
+      "windows_en": "Snipping Tool",
+      "linux_general": "Captura de pantalla / Flameshot",
+      "linux_general_en": "Screenshot / Flameshot",
+      "por_distro": {
+        "ubuntu": "Impr Pant o gnome-screenshot",
+        "mint": "Herramienta de captura de pantalla",
+        "popos": "Impr Pant o gnome-screenshot",
+        "fedora": "Impr Pant o gnome-screenshot",
+        "elementary": "Herramienta de captura integrada",
+        "manjaro": "Spectacle (KDE) o xfce4-screenshooter",
+        "arch": "Depende del escritorio"
+      },
+      "descripcion_es": "Flameshot es la mejor alternativa: permite anotar y editar capturas. Instálalo con tu gestor de paquetes.",
+      "descripcion_en": "Flameshot is the best alternative: allows annotating and editing screenshots. Install it with your package manager.",
+      "categoria": "sistema"
+    },
+    {
+      "windows": "Programador de tareas",
+      "windows_en": "Task Scheduler",
+      "linux_general": "cron / systemd timers",
+      "linux_general_en": "cron / systemd timers",
+      "descripcion_es": "cron permite ejecutar tareas programadas. Edita con: crontab -e. Los systemd timers son la alternativa moderna.",
+      "descripcion_en": "cron allows running scheduled tasks. Edit with: crontab -e. Systemd timers are the modern alternative.",
+      "categoria": "sistema",
+      "cmd": "crontab -e"
+    },
+    {
+      "windows": "Escritorio remoto",
+      "windows_en": "Remote Desktop",
+      "linux_general": "RDP / VNC / SSH",
+      "linux_general_en": "RDP / VNC / SSH",
+      "descripcion_es": "SSH para terminal remota. VNC o RDP (via xrdp) para escritorio gráfico remoto. Remmina es el cliente más completo.",
+      "descripcion_en": "SSH for remote terminal. VNC or RDP (via xrdp) for remote graphical desktop. Remmina is the most complete client.",
+      "categoria": "redes"
+    },
+    {
+      "windows": "Cifrado BitLocker",
+      "windows_en": "BitLocker Encryption",
+      "linux_general": "LUKS (cifrado de disco)",
+      "linux_general_en": "LUKS (disk encryption)",
+      "descripcion_es": "LUKS cifra tu disco completo. Se configura durante la instalación. Para USBs, usa el gestor de archivos para formatear con cifrado.",
+      "descripcion_en": "LUKS encrypts your entire disk. It's configured during installation. For USBs, use the file manager to format with encryption.",
+      "categoria": "seguridad"
+    },
+    {
+      "windows": "Restaurar sistema",
+      "windows_en": "System Restore",
+      "linux_general": "Timeshift",
+      "linux_general_en": "Timeshift",
+      "descripcion_es": "Timeshift crea snapshots del sistema. Si algo sale mal, puedes revertir. Linux Mint lo incluye por defecto.",
+      "descripcion_en": "Timeshift creates system snapshots. If something goes wrong, you can revert. Linux Mint includes it by default.",
+      "categoria": "mantenimiento"
+    },
+    {
+      "windows": "Buscar archivos",
+      "windows_en": "Search files",
+      "linux_general": "find / locate / búsqueda del escritorio",
+      "linux_general_en": "find / locate / desktop search",
+      "descripcion_es": "find busca archivos: find /home -name '*.txt'. locate es más rápido pero necesita actualizar su base de datos con updatedb.",
+      "descripcion_en": "find searches files: find /home -name '*.txt'. locate is faster but needs to update its database with updatedb.",
+      "categoria": "archivos",
+      "cmd": "find /ruta -name 'archivo'"
+    },
+    {
+      "windows": "Comprimir archivos (ZIP)",
+      "windows_en": "Compress files (ZIP)",
+      "linux_general": "zip / tar / gestor de archivos",
+      "linux_general_en": "zip / tar / file manager",
+      "descripcion_es": "El gestor de archivos puede comprimir/descomprimir. Desde terminal: tar -czf archivo.tar.gz carpeta/ o zip -r archivo.zip carpeta/",
+      "descripcion_en": "The file manager can compress/decompress. From terminal: tar -czf file.tar.gz folder/ or zip -r file.zip folder/",
+      "categoria": "archivos",
+      "cmd": "tar -czf archivo.tar.gz carpeta/"
+    },
+    {
+      "windows": "Variables de entorno",
+      "windows_en": "Environment Variables",
+      "linux_general": "~/.bashrc o /etc/environment",
+      "linux_general_en": "~/.bashrc or /etc/environment",
+      "descripcion_es": "Las variables de entorno se definen en ~/.bashrc (usuario) o /etc/environment (sistema). Usa: export VARIABLE=valor",
+      "descripcion_en": "Environment variables are defined in ~/.bashrc (user) or /etc/environment (system). Use: export VARIABLE=value",
+      "categoria": "sistema",
+      "cmd": "export VARIABLE=valor"
+    },
+    {
+      "windows": "Accesos directos (.lnk)",
+      "windows_en": "Shortcuts (.lnk)",
+      "linux_general": "Enlaces simbólicos / .desktop",
+      "linux_general_en": "Symbolic links / .desktop",
+      "descripcion_es": "En Linux se usan enlaces simbólicos: ln -s /ruta/original /ruta/enlace. Los accesos directos de aplicaciones son archivos .desktop.",
+      "descripcion_en": "Linux uses symbolic links: ln -s /original/path /link/path. Application shortcuts are .desktop files.",
+      "categoria": "archivos",
+      "cmd": "ln -s /ruta/original /ruta/enlace"
+    },
+    {
+      "windows": "Permisos de archivos",
+      "windows_en": "File Permissions",
+      "linux_general": "chmod / chown",
+      "linux_general_en": "chmod / chown",
+      "descripcion_es": "chmod cambia permisos (lectura/escritura/ejecución). chown cambia el propietario. Ver permisos: ls -la",
+      "descripcion_en": "chmod changes permissions (read/write/execute). chown changes the owner. View permissions: ls -la",
+      "categoria": "seguridad",
+      "cmd": "chmod 755 archivo"
+    },
+    {
+      "windows": "Apagar / Reiniciar",
+      "windows_en": "Shutdown / Restart",
+      "linux_general": "shutdown / reboot",
+      "linux_general_en": "shutdown / reboot",
+      "descripcion_es": "Desde terminal: sudo shutdown now (apagar) o sudo reboot (reiniciar). También desde el menú del escritorio como en Windows.",
+      "descripcion_en": "From terminal: sudo shutdown now (shutdown) or sudo reboot (restart). Also from the desktop menu like in Windows.",
+      "categoria": "sistema",
+      "cmd": "sudo shutdown now"
+    },
+    {
+      "windows": "Administrador de dispositivos",
+      "windows_en": "Device Manager",
+      "linux_general": "lspci / lsusb / lshw",
+      "linux_general_en": "lspci / lsusb / lshw",
+      "descripcion_es": "lspci lista dispositivos PCI (GPU, red...). lsusb lista dispositivos USB. lshw muestra todo el hardware detallado.",
+      "descripcion_en": "lspci lists PCI devices (GPU, network...). lsusb lists USB devices. lshw shows all detailed hardware.",
+      "categoria": "sistema",
+      "cmd": "lspci"
+    },
+    {
+      "windows": "Información del sistema",
+      "windows_en": "System Information",
+      "linux_general": "neofetch / fastfetch / uname",
+      "linux_general_en": "neofetch / fastfetch / uname",
+      "descripcion_es": "neofetch muestra info bonita del sistema en terminal. uname -a muestra el kernel. Para hardware: sudo lshw -short",
+      "descripcion_en": "neofetch shows nice system info in terminal. uname -a shows the kernel. For hardware: sudo lshw -short",
+      "categoria": "sistema",
+      "cmd": "neofetch"
+    },
+    {
+      "windows": "Particiones de disco",
+      "windows_en": "Disk Partitions",
+      "linux_general": "GParted / fdisk",
+      "linux_general_en": "GParted / fdisk",
+      "descripcion_es": "GParted es el gestor gráfico de particiones (como el de Windows pero mejor). fdisk y parted son las opciones de terminal.",
+      "descripcion_en": "GParted is the graphical partition manager (like Windows but better). fdisk and parted are the terminal options.",
+      "categoria": "sistema",
+      "cmd": "sudo gparted"
+    }
+  ]
+}

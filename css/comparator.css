@@ -1,0 +1,160 @@
+/* ===== COMPARATOR ===== */
+.comparator-selector {
+  padding: var(--space-xl) var(--space-lg);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.comparator-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.comparator-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+.comparator-distro-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.comparator-distro-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  color: var(--text-primary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.comparator-distro-chip:hover {
+  background: var(--bg-hover);
+}
+
+.comparator-distro-chip--active {
+  border-color: var(--accent-green);
+  background: rgba(0, 255, 136, 0.08);
+}
+
+.comparator-distro-chip__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.comparator-btn {
+  width: 100%;
+}
+
+/* Table */
+.comparator-table-container {
+  padding: var(--space-md) var(--space-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.comparator-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.comparator-table th {
+  text-align: center;
+  padding: var(--space-sm) var(--space-md);
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid var(--border-subtle);
+}
+
+.comparator-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+
+.comparator-cat-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.comparator-stars {
+  color: var(--accent-amber);
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.comparator-info-row td {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.comparator-info-row .comparator-cat-label {
+  text-align: left;
+}
+
+.comparator-list-cell ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparator-list-cell li {
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 2px 0;
+  line-height: 1.4;
+}
+
+.comparator-list-cell li::before {
+  content: '• ';
+  color: var(--text-tertiary);
+}
+
+.comparator-ideal-cell {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.comparator-pros-row td {
+  border-top: 2px solid var(--border-subtle);
+}
+
+.comparator-recommendation {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .comparator-table {
+    font-size: 11px;
+  }
+  .comparator-table th,
+  .comparator-table td {
+    padding: var(--space-xs) var(--space-sm);
+  }
+}

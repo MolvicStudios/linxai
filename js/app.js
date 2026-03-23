@@ -1,6 +1,7 @@
 // app.js — Main application orchestrator
 import { applyI18n, t } from './i18n.js'
 import { getState, setState, subscribe } from './state.js'
+import { getDistroName } from './groq.js'
 import { initOnboarding } from './onboarding.js'
 import { initChat, sendChatMessage, renderWelcome, loadSession } from './chat.js'
 import { initTerminal, sendTerminalQuery, renderEmpty as renderTerminalEmpty } from './terminal.js'
@@ -8,6 +9,10 @@ import { initGuide, renderLessons, sendGuideMessage } from './guide.js'
 import { renderHistorySidebar, startNewSession, loadSessionById, saveCurrentSession } from './history.js'
 import { initSettings } from './settings.js'
 import { initPWA } from './pwa.js'
+import { initWizard, renderWizard, resetWizard } from './wizard.js'
+import { initComparator, renderComparator } from './comparator.js'
+import { initGaming, renderGaming } from './gaming.js'
+import { initGlossary, renderGlossary } from './glossary.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   // Apply translations
@@ -17,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initChat()
   initTerminal()
   initGuide()
+  initWizard()
+  initComparator()
+  initGaming()
+  initGlossary()
   initSettings()
   initPWA()
   renderHistorySidebar()
@@ -96,6 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update header
     document.getElementById('header-mode-label').textContent = t('mode_' + mode)
 
+    // Show/hide input bar based on mode
+    const inputBar = document.getElementById('input-bar')
+    const modesWithInput = ['chat', 'terminal', 'guide']
+    if (inputBar) {
+      inputBar.style.display = modesWithInput.includes(mode) ? '' : 'none'
+    }
+
     // Update placeholder
     if (mode === 'terminal') {
       input.setAttribute('placeholder', t('terminal_placeholder'))
@@ -104,6 +120,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       input.setAttribute('placeholder', t('chat_placeholder'))
     }
+
+    // Render v2 views on switch
+    if (mode === 'wizard') renderWizard()
+    if (mode === 'comparator') renderComparator()
+    if (mode === 'gaming') renderGaming()
+    if (mode === 'glossary') renderGlossary()
 
     // Close sidebar on mobile
     closeSidebar()
@@ -194,6 +216,21 @@ document.addEventListener('DOMContentLoaded', () => {
     renderHistorySidebar()
   })
 
+  // ===== V2 CUSTOM EVENTS =====
+  window.addEventListener('linxai:switch-mode', (e) => {
+    switchMode(e.detail)
+  })
+
+  window.addEventListener('linxai:gaming-mode', () => {
+    switchMode('chat')
+  })
+
+  // Check URL params for shared wizard result
+  const params = new URLSearchParams(window.location.search)
+  if (params.has('resultado')) {
+    switchMode('wizard')
+  }
+
   // ===== STATE SUBSCRIPTIONS =====
   subscribe('loading', (loading) => {
     btnSend.disabled = loading || !input.value.trim()
@@ -213,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function syncUI() {
   const { lang, distro, mode } = getState()
   document.getElementById('btn-lang-toggle').textContent = lang.toUpperCase()
-  document.getElementById('badge-distro').textContent = distro === 'arch' ? 'Arch' : 'Ubuntu'
+  document.getElementById('badge-distro').textContent = getDistroName(distro)
   document.getElementById('header-mode-label').textContent = t('mode_' + mode)
 
   // Update html lang attribute

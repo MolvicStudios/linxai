@@ -1,0 +1,72 @@
+{
+  "preguntas": [
+    {
+      "id": "uso",
+      "titulo_es": "¿Para qué vas a usar principalmente Linux?",
+      "titulo_en": "What will you mainly use Linux for?",
+      "opciones": [
+        { "id": "gaming", "label_es": "Gaming y videojuegos", "label_en": "Gaming and video games", "icon": "🎮" },
+        { "id": "ofimatica", "label_es": "Trabajo y ofimática", "label_en": "Work and office", "icon": "💼" },
+        { "id": "programacion", "label_es": "Programación y desarrollo", "label_en": "Programming and development", "icon": "💻" },
+        { "id": "diseno", "label_es": "Diseño y multimedia", "label_en": "Design and multimedia", "icon": "🎨" },
+        { "id": "servidor", "label_es": "Servidor / homelab", "label_en": "Server / homelab", "icon": "🖥️" },
+        { "id": "general", "label_es": "Uso general — navegar, ver vídeos, redes sociales", "label_en": "General use — browsing, videos, social media", "icon": "🌐" }
+      ]
+    },
+    {
+      "id": "experiencia",
+      "titulo_es": "¿Qué experiencia tienes con Linux?",
+      "titulo_en": "What experience do you have with Linux?",
+      "opciones": [
+        { "id": "ninguna", "label_es": "Ninguna — vengo de Windows", "label_en": "None — coming from Windows", "icon": "🪟" },
+        { "id": "poca", "label_es": "Probé Linux alguna vez pero poco", "label_en": "Tried Linux once but not much", "icon": "🔰" },
+        { "id": "algo", "label_es": "Uso Linux de vez en cuando", "label_en": "I use Linux occasionally", "icon": "🐧" },
+        { "id": "avanzado", "label_es": "Me defiendo bien en la terminal", "label_en": "I'm comfortable with the terminal", "icon": "⌨️" }
+      ]
+    },
+    {
+      "id": "hardware",
+      "titulo_es": "¿Cómo de potente es tu ordenador?",
+      "titulo_en": "How powerful is your computer?",
+      "opciones": [
+        { "id": "antiguo", "label_es": "Muy antiguo — menos de 4GB RAM", "label_en": "Very old — less than 4GB RAM", "icon": "🐌" },
+        { "id": "normal", "label_es": "Normal — 4-8GB RAM", "label_en": "Normal — 4-8GB RAM", "icon": "💻" },
+        { "id": "bueno", "label_es": "Bueno — 8-16GB RAM", "label_en": "Good — 8-16GB RAM", "icon": "🚀" },
+        { "id": "potente", "label_es": "Potente — más de 16GB RAM", "label_en": "Powerful — more than 16GB RAM", "icon": "⚡" }
+      ]
+    },
+    {
+      "id": "actualizaciones",
+      "titulo_es": "¿Qué prefieres en cuanto a actualizaciones?",
+      "titulo_en": "What do you prefer regarding updates?",
+      "opciones": [
+        { "id": "estabilidad", "label_es": "Estabilidad — prefiero que todo funcione aunque sea algo antiguo", "label_en": "Stability — I prefer everything works even if it's a bit old", "icon": "🛡️" },
+        { "id": "equilibrio", "label_es": "Equilibrio — actualizaciones regulares sin riesgos", "label_en": "Balance — regular updates without risks", "icon": "⚖️" },
+        { "id": "cutting", "label_es": "Siempre lo último — quiero las novedades aunque haya algún fallo", "label_en": "Always the latest — I want new features even if there are some bugs", "icon": "🔥" }
+      ]
+    },
+    {
+      "id": "interfaz",
+      "titulo_es": "¿Qué interfaz visual te parece más cómoda?",
+      "titulo_en": "Which visual interface do you find most comfortable?",
+      "opciones": [
+        { "id": "windows", "label_es": "Parecida a Windows — barra abajo, menú inicio", "label_en": "Similar to Windows — taskbar at bottom, start menu", "icon": "🪟" },
+        { "id": "macos", "label_es": "Parecida a macOS — dock lateral o inferior", "label_en": "Similar to macOS — side or bottom dock", "icon": "🍎" },
+        { "id": "minimal", "label_es": "Minimalista — sin decoraciones innecesarias", "label_en": "Minimalist — no unnecessary decorations", "icon": "✨" },
+        { "id": "indiferente", "label_es": "No me importa, lo que funcione mejor", "label_en": "I don't care, whatever works best", "icon": "🤷" }
+      ]
+    },
+    {
+      "id": "nvidia",
+      "titulo_es": "¿Tienes tarjeta gráfica NVIDIA?",
+      "titulo_en": "Do you have an NVIDIA graphics card?",
+      "opciones": [
+        { "id": "si", "label_es": "Sí, NVIDIA", "label_en": "Yes, NVIDIA", "icon": "💚" },
+        { "id": "amd", "label_es": "AMD o Intel integrada", "label_en": "AMD or Intel integrated", "icon": "❤️" },
+        { "id": "nosabe", "label_es": "No sé", "label_en": "I don't know", "icon": "❓" }
+      ]
+    }
+  ],
+  "bienvenida_es": "Voy a hacerte 6 preguntas para encontrar tu Linux ideal.\nNo hay respuestas incorrectas — solo dime cómo usas tu ordenador.",
+  "bienvenida_en": "I'm going to ask you 6 questions to find your ideal Linux.\nThere are no wrong answers — just tell me how you use your computer."
+}

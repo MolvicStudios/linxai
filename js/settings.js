@@ -1,6 +1,7 @@
 // settings.js — Settings panel logic
 import { t, applyI18n } from './i18n.js'
 import { getState, setState } from './state.js'
+import { getDistroName } from './groq.js'
 import { clearAllHistory } from './history.js'
 
 export function initSettings() {
@@ -119,7 +120,7 @@ function closeSettings() {
 function updateDistroBadge() {
   const badge = document.getElementById('badge-distro')
   const { distro } = getState()
-  badge.textContent = distro === 'arch' ? 'Arch' : 'Ubuntu'
+  badge.textContent = getDistroName(distro)
 }
 
 function updateLangBadge() {

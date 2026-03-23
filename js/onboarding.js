@@ -3,10 +3,14 @@ import { t, applyI18n } from './i18n.js'
 import { getState, setState } from './state.js'
 
 const DISTROS = [
-  { id: 'ubuntu', name: 'Ubuntu', icon: '🟠' },
-  { id: 'ubuntu', name: 'Linux Mint', icon: '🟢', alias: 'mint' },
-  { id: 'arch', name: 'Arch Linux', icon: '🔵' },
-  { id: 'arch', name: 'Manjaro', icon: '🟣', alias: 'manjaro' },
+  { id: 'ubuntu',      name: 'Ubuntu',        icon: '🟠', color: '#E95420' },
+  { id: 'mint',        name: 'Linux Mint',     icon: '🟢', color: '#87CF3E' },
+  { id: 'popos',       name: 'Pop!_OS',        icon: '🔵', color: '#48B9C7' },
+  { id: 'elementary',  name: 'Elementary OS',  icon: '💎', color: '#64BAFF' },
+  { id: 'fedora',      name: 'Fedora',         icon: '🎩', color: '#294172' },
+  { id: 'opensuse',    name: 'openSUSE',       icon: '🦎', color: '#73BA25' },
+  { id: 'manjaro',     name: 'Manjaro',        icon: '🟣', color: '#35BF5C' },
+  { id: 'arch',        name: 'Arch Linux',     icon: '🏛️', color: '#1793D1' },
 ]
 
 const LEVELS = ['beginner', 'intermediate', 'advanced']

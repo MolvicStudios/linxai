@@ -1,0 +1,149 @@
+{
+  "guias": [
+    {
+      "id": "steam-install",
+      "titulo_es": "Instalar Steam",
+      "titulo_en": "Install Steam",
+      "icono": "🎮",
+      "distros": ["ubuntu", "mint", "popos", "fedora", "manjaro", "arch", "opensuse", "elementary"],
+      "pasos": {
+        "ubuntu": [
+          { "cmd": "sudo apt update", "desc_es": "Actualizar lista de paquetes", "desc_en": "Update package list" },
+          { "cmd": "sudo apt install steam", "desc_es": "Instalar Steam desde repositorios", "desc_en": "Install Steam from repositories" }
+        ],
+        "mint": [
+          { "cmd": "sudo apt update", "desc_es": "Actualizar lista de paquetes", "desc_en": "Update package list" },
+          { "cmd": "sudo apt install steam", "desc_es": "Instalar Steam desde repositorios", "desc_en": "Install Steam from repositories" }
+        ],
+        "popos": [
+          { "cmd": "sudo apt update", "desc_es": "Actualizar lista de paquetes", "desc_en": "Update package list" },
+          { "cmd": "sudo apt install steam", "desc_es": "Instalar Steam (también disponible en Pop!_Shop)", "desc_en": "Install Steam (also available in Pop!_Shop)" }
+        ],
+        "fedora": [
+          { "cmd": "sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm", "desc_es": "Activar RPM Fusion (necesario para Steam)", "desc_en": "Enable RPM Fusion (required for Steam)" },
+          { "cmd": "sudo dnf install steam", "desc_es": "Instalar Steam", "desc_en": "Install Steam" }
+        ],
+        "manjaro": [
+          { "cmd": "sudo pacman -S steam", "desc_es": "Instalar Steam desde repositorios oficiales", "desc_en": "Install Steam from official repositories" }
+        ],
+        "arch": [
+          { "desc_es": "Habilita el repositorio multilib en /etc/pacman.conf descomentando [multilib]", "desc_en": "Enable the multilib repository in /etc/pacman.conf by uncommenting [multilib]" },
+          { "cmd": "sudo pacman -Syu", "desc_es": "Actualizar repositorios", "desc_en": "Update repositories" },
+          { "cmd": "sudo pacman -S steam", "desc_es": "Instalar Steam desde repositorios oficiales", "desc_en": "Install Steam from official repositories" }
+        ],
+        "opensuse": [
+          { "cmd": "sudo zypper install steam", "desc_es": "Instalar Steam", "desc_en": "Install Steam" }
+        ],
+        "elementary": [
+          { "cmd": "sudo apt update", "desc_es": "Actualizar lista de paquetes", "desc_en": "Update package list" },
+          { "cmd": "sudo apt install steam", "desc_es": "Instalar Steam desde repositorios", "desc_en": "Install Steam from repositories" }
+        ]
+      }
+    },
+    {
+      "id": "proton-enable",
+      "titulo_es": "Activar Proton para juegos de Windows",
+      "titulo_en": "Enable Proton for Windows games",
+      "icono": "🍷",
+      "distros": ["all"],
+      "pasos_generales_es": [
+        "Abre Steam → Configuración → Compatibilidad",
+        "Activa 'Habilitar Steam Play para todos los títulos'",
+        "Selecciona la versión de Proton más reciente",
+        "Reinicia Steam"
+      ],
+      "pasos_generales_en": [
+        "Open Steam → Settings → Compatibility",
+        "Enable 'Enable Steam Play for all other titles'",
+        "Select the most recent Proton version",
+        "Restart Steam"
+      ]
+    },
+    {
+      "id": "nvidia-drivers",
+      "titulo_es": "Instalar drivers NVIDIA",
+      "titulo_en": "Install NVIDIA drivers",
+      "icono": "🖥️",
+      "distros": ["ubuntu", "mint", "popos", "fedora", "manjaro", "opensuse"],
+      "pasos": {
+        "ubuntu": [
+          { "cmd": "ubuntu-drivers devices", "desc_es": "Ver drivers recomendados para tu GPU", "desc_en": "See recommended drivers for your GPU" },
+          { "cmd": "sudo ubuntu-drivers autoinstall", "desc_es": "Instalar automáticamente el driver recomendado", "desc_en": "Automatically install the recommended driver" }
+        ],
+        "mint": [
+          { "desc_es": "Abre 'Gestor de controladores' desde el menú de inicio", "desc_en": "Open 'Driver Manager' from the start menu" },
+          { "desc_es": "Selecciona el driver NVIDIA recomendado y pulsa 'Aplicar cambios'", "desc_en": "Select the recommended NVIDIA driver and click 'Apply Changes'" }
+        ],
+        "popos": [
+          { "desc_es": "Pop!_OS detecta automáticamente tu NVIDIA al instalar. Si necesitas reinstalar:", "desc_en": "Pop!_OS detects your NVIDIA automatically on install. If you need to reinstall:" },
+          { "cmd": "sudo apt install system76-driver-nvidia", "desc_es": "Instalar driver NVIDIA optimizado para Pop!_OS", "desc_en": "Install NVIDIA driver optimized for Pop!_OS" }
+        ],
+        "fedora": [
+          { "cmd": "sudo dnf install akmod-nvidia", "desc_es": "Instalar driver NVIDIA (RPM Fusion debe estar activado)", "desc_en": "Install NVIDIA driver (RPM Fusion must be enabled)" },
+          { "cmd": "sudo dnf install xorg-x11-drv-nvidia-cuda", "desc_es": "Instalar soporte CUDA (opcional)", "desc_en": "Install CUDA support (optional)" }
+        ],
+        "manjaro": [
+          { "cmd": "sudo mhwd -a pci nonfree 0300", "desc_es": "Instalar driver NVIDIA con el gestor de hardware de Manjaro", "desc_en": "Install NVIDIA driver with Manjaro hardware manager" }
+        ],
+        "opensuse": [
+          { "cmd": "sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/leap/15.6 NVIDIA", "desc_es": "Añadir repositorio NVIDIA", "desc_en": "Add NVIDIA repository" },
+          { "cmd": "sudo zypper install nvidia-driver", "desc_es": "Instalar driver NVIDIA", "desc_en": "Install NVIDIA driver" }
+        ]
+      }
+    },
+    {
+      "id": "protondb",
+      "titulo_es": "Consultar compatibilidad de juegos",
+      "titulo_en": "Check game compatibility",
+      "icono": "🔍",
+      "distros": ["all"],
+      "descripcion_es": "ProtonDB es la base de datos comunitaria donde puedes ver si tu juego funciona en Linux y cómo configurarlo.",
+      "descripcion_en": "ProtonDB is the community database where you can check if your game works on Linux and how to configure it.",
+      "url": "https://www.protondb.com",
+      "niveles": [
+        { "nivel": "Platinum", "color": "#B4C7DC", "desc_es": "Funciona perfecto sin configuración", "desc_en": "Works perfectly without configuration" },
+        { "nivel": "Gold", "color": "#CFB53B", "desc_es": "Funciona con ajustes mínimos", "desc_en": "Works with minimal tweaks" },
+        { "nivel": "Silver", "color": "#A6A6A6", "desc_es": "Funciona con algunos problemas menores", "desc_en": "Works with some minor issues" },
+        { "nivel": "Bronze", "color": "#CD7F32", "desc_es": "Funciona pero con problemas notables", "desc_en": "Works but with notable issues" },
+        { "nivel": "Borked", "color": "#FF4F4F", "desc_es": "No funciona actualmente", "desc_en": "Currently not working" }
+      ]
+    }
+  ],
+  "problemas_comunes": [
+    {
+      "problema_es": "El juego no arranca después de instalar Steam",
+      "problema_en": "The game doesn't start after installing Steam",
+      "solucion_es": "Activa las librerías de 32 bits:\nsudo dpkg --add-architecture i386 && sudo apt update && sudo apt install libgl1-mesa-dri:i386",
+      "solucion_en": "Enable 32-bit libraries:\nsudo dpkg --add-architecture i386 && sudo apt update && sudo apt install libgl1-mesa-dri:i386",
+      "distros": ["ubuntu", "mint", "popos", "elementary"]
+    },
+    {
+      "problema_es": "FPS muy bajo comparado con Windows",
+      "problema_en": "Very low FPS compared to Windows",
+      "solucion_es": "Instala Game Mode:\nsudo apt install gamemode\nLuego en Steam → Propiedades del juego → Opciones de lanzamiento escribe:\ngamemoderun %command%",
+      "solucion_en": "Install Game Mode:\nsudo apt install gamemode\nThen in Steam → Game Properties → Launch Options type:\ngamemoderun %command%",
+      "distros": ["ubuntu", "mint", "popos", "elementary"]
+    },
+    {
+      "problema_es": "El juego pide anti-cheat (EAC / BattlEye)",
+      "problema_en": "The game requires anti-cheat (EAC / BattlEye)",
+      "solucion_es": "Algunos juegos con anti-cheat no funcionan en Linux. Consulta ProtonDB para ver el estado actual. Muchos publishers están activando soporte nativo.",
+      "solucion_en": "Some games with anti-cheat don't work on Linux. Check ProtonDB for the current status. Many publishers are enabling native support.",
+      "distros": ["all"]
+    },
+    {
+      "problema_es": "Steam no encuentra las librerías de Vulkan",
+      "problema_en": "Steam can't find Vulkan libraries",
+      "solucion_es": "Instala los paquetes Vulkan necesarios:\nsudo apt install mesa-vulkan-drivers libvulkan1 vulkan-tools\nPara NVIDIA: sudo apt install nvidia-vulkan-icd",
+      "solucion_en": "Install the required Vulkan packages:\nsudo apt install mesa-vulkan-drivers libvulkan1 vulkan-tools\nFor NVIDIA: sudo apt install nvidia-vulkan-icd",
+      "distros": ["ubuntu", "mint", "popos", "elementary"]
+    },
+    {
+      "problema_es": "El controlador / mando no funciona",
+      "problema_en": "The controller / gamepad doesn't work",
+      "solucion_es": "Steam soporta la mayoría de controladores nativamente. Activa 'Steam Input' en Configuración → Controlador. Para mandos de Xbox: sudo apt install xboxdrv",
+      "solucion_en": "Steam supports most controllers natively. Enable 'Steam Input' in Settings → Controller. For Xbox controllers: sudo apt install xboxdrv",
+      "distros": ["ubuntu", "mint", "popos", "elementary"]
+    }
+  ]
+}

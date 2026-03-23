@@ -1,0 +1,214 @@
+/* ===== GAMING ===== */
+.gaming-header {
+  padding: var(--space-xl) var(--space-lg) var(--space-md);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gaming-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.gaming-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.gaming-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.gaming-badge strong {
+  color: var(--text-primary);
+}
+
+/* Guides */
+.gaming-guides {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.gaming-guide-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.gaming-guide-card--open {
+  border-color: var(--accent-green);
+}
+
+.gaming-guide-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+}
+
+.gaming-guide-card__icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.gaming-guide-card__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.gaming-guide-card__body {
+  padding: 0 var(--space-md) var(--space-md);
+}
+
+/* Steps */
+.gaming-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.gaming-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.gaming-step__desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.gaming-step__cmd {
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-base);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-code);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.gaming-steps-general {
+  padding-left: var(--space-lg);
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.gaming-guide-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+/* ProtonDB levels */
+.gaming-protondb-levels {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.protondb-level {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  border-left: 3px solid;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.gaming-link {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-size: 13px;
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.gaming-link:hover {
+  text-decoration: underline;
+}
+
+/* Problems */
+.gaming-problems {
+  max-width: 700px;
+  margin: var(--space-lg) auto 0;
+  padding: 0 var(--space-lg);
+}
+
+.gaming-problems-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.gaming-problem {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.gaming-problem__question {
+  padding: var(--space-md) 0;
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+  list-style: none;
+}
+
+.gaming-problem__question::-webkit-details-marker {
+  display: none;
+}
+
+.gaming-problem__question::before {
+  content: '→ ';
+  color: var(--accent-green);
+}
+
+.gaming-problem[open] .gaming-problem__question::before {
+  content: '↓ ';
+}
+
+.gaming-problem__answer {
+  padding: 0 0 var(--space-md) var(--space-md);
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.gaming-problem__answer code {
+  display: block;
+  margin: var(--space-xs) 0;
+}
+
+/* Ask button */
+.gaming-ask-wrap {
+  max-width: 700px;
+  margin: var(--space-xl) auto;
+  padding: 0 var(--space-lg);
+}
+
+.gaming-ask-btn {
+  width: 100%;
+}

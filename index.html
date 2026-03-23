@@ -7,7 +7,7 @@
   <!-- SEO primario -->
   <title>LinxAI — Asistente IA para aprender Linux | Tu guía para migrar de Windows</title>
   <meta name="description" content="LinxAI es tu asistente inteligente para migrar de Windows a Linux. Chat IA, traducción de comandos en lenguaje natural y guías interactivas para Ubuntu, Linux Mint, Arch y Manjaro. Gratis.">
-  <meta name="keywords" content="aprender linux, migrar de windows a linux, asistente linux ia, comandos linux principiantes, ubuntu para principiantes, linux mint guia, arch linux español, instalar linux, terminal linux facil">
+  <meta name="keywords" content="aprender linux, migrar de windows a linux, asistente linux ia, comandos linux principiantes, ubuntu para principiantes, linux mint guia, arch linux español, instalar linux, terminal linux facil, gaming linux, que linux instalar, steam linux, proton gaming, fedora, pop os, opensuse, elementary os">
   <meta name="author" content="MolvicStudios">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://linxai.quest/">
@@ -79,6 +79,10 @@
   <link rel="stylesheet" href="/css/terminal.css">
   <link rel="stylesheet" href="/css/guide.css">
   <link rel="stylesheet" href="/css/onboarding.css">
+  <link rel="stylesheet" href="/css/wizard.css">
+  <link rel="stylesheet" href="/css/comparator.css">
+  <link rel="stylesheet" href="/css/gaming.css">
+  <link rel="stylesheet" href="/css/glossary.css">
   <link rel="stylesheet" href="/css/dark.css">
 </head>
 <body>
@@ -107,6 +111,24 @@
         <button class="nav-btn" data-mode="guide">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           <span data-i18n="mode_guide">Guía</span>
+        </button>
+
+        <!-- v2 modes -->
+        <button class="nav-btn" data-mode="wizard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49"/><circle cx="12" cy="12" r="2"/></svg>
+          <span data-i18n="nav_wizard">¿Qué Linux?</span>
+        </button>
+        <button class="nav-btn" data-mode="comparator">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          <span data-i18n="nav_comparator">Comparar</span>
+        </button>
+        <button class="nav-btn" data-mode="gaming">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="11" r="1"/><circle cx="18" cy="13" r="1"/></svg>
+          <span data-i18n="nav_gaming">Gaming</span>
+        </button>
+        <button class="nav-btn" data-mode="glossary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span data-i18n="nav_glossary">Glosario</span>
         </button>
       </nav>
 
@@ -165,6 +187,22 @@
         <div id="guide-content" class="guide-content"></div>
       </div>
 
+      <div id="view-wizard" class="view">
+        <div id="wizard-content" class="wizard-content"></div>
+      </div>
+
+      <div id="view-comparator" class="view">
+        <div id="comparator-content" class="comparator-content"></div>
+      </div>
+
+      <div id="view-gaming" class="view">
+        <div id="gaming-content" class="gaming-content"></div>
+      </div>
+
+      <div id="view-glossary" class="view">
+        <div id="glossary-content" class="glossary-content"></div>
+      </div>
+
       <!-- Input bar -->
       <div id="input-bar" class="input-bar">
         <textarea id="chat-input" rows="1" data-i18n-placeholder="chat_placeholder" placeholder="Pregunta algo sobre Linux..."></textarea>
@@ -210,8 +248,14 @@
           <div class="settings-group">
             <label class="settings-label" data-i18n="settings_distro">Distribución</label>
             <select id="settings-distro" class="settings-select">
-              <option value="ubuntu">Ubuntu / Linux Mint</option>
-              <option value="arch">Arch Linux / Manjaro</option>
+              <option value="ubuntu">Ubuntu</option>
+              <option value="mint">Linux Mint</option>
+              <option value="popos">Pop!_OS</option>
+              <option value="elementary">Elementary OS</option>
+              <option value="fedora">Fedora</option>
+              <option value="opensuse">openSUSE</option>
+              <option value="manjaro">Manjaro</option>
+              <option value="arch">Arch Linux</option>
             </select>
           </div>
           <!-- Level -->
@@ -265,7 +309,7 @@
             </div>
           </div>
           <div class="settings-footer">
-            <span>v1.0.0 · <a href="https://linxai.quest" target="_blank" rel="noopener">linxai.quest</a></span>
+            <span>v2.0.0 · <a href="https://linxai.quest" target="_blank" rel="noopener">linxai.quest</a></span>
           </div>
         </div>
       </div>

@@ -43,8 +43,29 @@ export async function askGroq(messages, systemPrompt) {
 // ===== System prompt builders =====
 
 const DISTRO_NAMES = {
-  ubuntu: 'Ubuntu/Linux Mint',
-  arch: 'Arch Linux/Manjaro'
+  ubuntu: 'Ubuntu',
+  mint: 'Linux Mint',
+  popos: 'Pop!_OS',
+  elementary: 'Elementary OS',
+  fedora: 'Fedora',
+  opensuse: 'openSUSE',
+  manjaro: 'Manjaro',
+  arch: 'Arch Linux'
+}
+
+const GESTORES = {
+  ubuntu: 'apt', mint: 'apt', popos: 'apt', elementary: 'apt',
+  fedora: 'dnf',
+  opensuse: 'zypper',
+  manjaro: 'pacman', arch: 'pacman'
+}
+
+export function getGestorPaquetes(distro) {
+  return GESTORES[distro] || 'apt'
+}
+
+export function getDistroName(distro) {
+  return DISTRO_NAMES[distro] || distro
 }
 
 const LEVEL_NAMES = {
@@ -58,28 +79,24 @@ export function buildChatPrompt() {
   const distroName = DISTRO_NAMES[distro] || distro
   const levelName = LEVEL_NAMES[level]?.[lang] || level
   const langLabel = lang === 'es' ? 'español' : 'English'
+  const gestor = getGestorPaquetes(distro)
 
   return `Eres LinxAI, un asistente experto en Linux especializado en ayudar a usuarios que migran desde Windows.
-El usuario usa ${distroName} y tiene nivel ${levelName}.
+El usuario usa ${distroName} (gestor de paquetes: ${gestor}) y tiene nivel ${levelName}.
 Responde en ${langLabel}. Sé directo, práctico y amigable.
+IMPORTANTE: Cuando des comandos de instalación, usa SIEMPRE ${gestor} (no apt si la distro es Fedora/openSUSE/Arch).
 Cuando muestres comandos, usa bloques de código con \`\`\`. Explica siempre qué hace cada comando antes de mostrarlo.
-Si el usuario pregunta algo de Windows, muestra el equivalente en Linux.
-Equivalencias comunes:
-- "Instalar programas" → ${distro === 'ubuntu' ? 'apt install / Software Center' : 'pacman -S / yay (AUR)'}
-- "Panel de Control" → gnome-control-center / kde systemsettings
-- "Explorador de archivos" → Nautilus, Thunar, Dolphin
-- "Administrador de tareas" → htop, btop, gnome-system-monitor
-- "CMD / PowerShell" → Terminal (bash/zsh)`
+Si el usuario pregunta algo de Windows, muestra el equivalente en Linux para ${distroName}.`
 }
 
 export function buildTerminalPrompt() {
   const { distro, lang } = getState()
   const distroName = DISTRO_NAMES[distro] || distro
   const langLabel = lang === 'es' ? 'español' : 'English'
-  const pkgMgr = distro === 'ubuntu' ? 'apt' : 'pacman'
+  const gestor = getGestorPaquetes(distro)
 
   return `Eres un traductor experto de lenguaje natural a comandos Linux.
-El usuario usa ${distroName} (gestor de paquetes: ${pkgMgr}).
+El usuario usa ${distroName} (gestor de paquetes: ${gestor}).
 Responde en ${langLabel}.
 Responde SIEMPRE en este formato JSON exacto y nada más:
 {
@@ -110,4 +127,18 @@ export function buildGuidePrompt(lessonTitle) {
 Distro: ${distroName}. Nivel: ${levelName}. Idioma: ${langLabel}.
 Sé paciente, usa ejemplos concretos y confirma que el usuario entiende antes de avanzar.
 Cuando muestres comandos usa bloques de código. Explica cada paso claramente.`
+}
+
+export function buildGamingPrompt() {
+  const { distro, lang, gpu } = getState()
+  const distroName = DISTRO_NAMES[distro] || distro
+  const gestor = getGestorPaquetes(distro)
+  const langLabel = lang === 'es' ? 'español' : 'English'
+  const gpuLabel = gpu === 'si' ? 'NVIDIA' : gpu === 'amd' ? 'AMD/Intel' : 'desconocida'
+
+  return `Eres LinxAI en modo Gaming experto.
+El usuario tiene ${distroName} (gestor: ${gestor}) y GPU: ${gpuLabel}.
+Ayuda con Steam, Proton, drivers GPU y compatibilidad de juegos.
+Da comandos específicos para ${distroName} usando ${gestor} cuando sea necesario.
+Responde en ${langLabel}. Sé directo y práctico.`
 }
