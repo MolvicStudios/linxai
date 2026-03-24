@@ -77,6 +77,7 @@ export async function sendChatMessage(text) {
     setState({ session: updatedSession, loading: false })
 
     appendMessageBubble('assistant', reply, aiMsg.ts)
+    window.molvicTrack && window.molvicTrack('chat_message')
     saveCurrentSession()
   } catch (err) {
     removeTyping()
