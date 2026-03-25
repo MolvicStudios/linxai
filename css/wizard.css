@@ -115,6 +115,9 @@
   border: none;
   cursor: pointer;
   padding: var(--space-xs) 0;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .wizard-back-btn:hover {
@@ -228,6 +231,7 @@
   color: #0D0F14;
   font-weight: 600;
   font-size: 14px;
+  min-height: 44px;
   border-radius: var(--radius-md);
   border: none;
   cursor: pointer;
@@ -253,6 +257,7 @@
   color: var(--text-primary);
   font-weight: 500;
   font-size: 14px;
+  min-height: 44px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
   cursor: pointer;
@@ -272,6 +277,7 @@
   background: none;
   color: var(--text-secondary);
   font-size: 13px;
+  min-height: 44px;
   border: none;
   cursor: pointer;
   transition: color var(--transition-fast);
@@ -289,5 +295,17 @@
   .wizard-rank-item__score {
     font-size: 12px;
     width: 32px;
+  }
+}
+
+@media (max-width: 375px) {
+  .wizard-question {
+    padding: var(--space-lg) var(--space-md);
+  }
+  .wizard-question__title {
+    font-size: 18px;
+  }
+  .wizard-result {
+    padding: var(--space-lg) var(--space-md);
   }
 }

@@ -212,3 +212,38 @@
 .gaming-ask-btn {
   width: 100%;
 }
+
+/* Responsive */
+@media (max-width: 480px) {
+  .gaming-title {
+    font-size: 19px;
+  }
+  .gaming-guide-card__header {
+    min-height: 48px;
+  }
+  .gaming-problems-title {
+    font-size: 15px;
+  }
+  .gaming-step__desc,
+  .gaming-step__cmd,
+  .gaming-guide-desc,
+  .gaming-problem__answer {
+    font-size: 0.875rem;
+  }
+  .gaming-header,
+  .gaming-guides,
+  .gaming-problems,
+  .gaming-ask-wrap {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+}
+
+@media (max-width: 375px) {
+  .gaming-header {
+    padding: var(--space-lg) var(--space-sm) var(--space-sm);
+  }
+  .gaming-badges {
+    gap: var(--space-xs);
+  }
+}

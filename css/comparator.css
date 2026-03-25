@@ -35,6 +35,7 @@
   border-radius: var(--radius-xl);
   color: var(--text-primary);
   font-size: 13px;
+  min-height: 44px;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
@@ -155,6 +156,19 @@
   }
   .comparator-table th,
   .comparator-table td {
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+@media (max-width: 375px) {
+  .comparator-table-container {
+    padding: var(--space-sm);
+  }
+  .comparator-distro-grid {
+    gap: var(--space-xs);
+  }
+  .comparator-distro-chip {
+    font-size: 12px;
     padding: var(--space-xs) var(--space-sm);
   }
 }

@@ -20,6 +20,7 @@
   border-radius: var(--radius-md);
   color: var(--text-primary);
   font-size: 14px;
+  min-height: 44px;
   font-family: var(--font-ui);
   margin-bottom: var(--space-md);
   outline: none;
@@ -47,6 +48,9 @@
   border-radius: var(--radius-xl);
   color: var(--text-secondary);
   font-size: 12px;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
@@ -173,4 +177,34 @@
 
 .history-search-input::placeholder {
   color: var(--text-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .glossary-title {
+    font-size: 19px;
+  }
+  .glossary-search {
+    font-size: 16px;
+  }
+  .glossary-item__desc {
+    font-size: 0.875rem;
+  }
+  .glossary-header,
+  .glossary-list {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+}
+
+@media (max-width: 375px) {
+  .glossary-header {
+    padding: var(--space-lg) var(--space-sm) var(--space-sm);
+  }
+  .glossary-list {
+    padding: 0 var(--space-sm) var(--space-lg);
+  }
+  .glossary-item {
+    padding: var(--space-sm);
+  }
 }

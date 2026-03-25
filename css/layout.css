@@ -68,6 +68,7 @@
   border-radius: var(--radius-md);
   color: var(--text-secondary);
   font-size: 14px;
+  min-height: 44px;
   font-weight: 500;
   transition: all var(--transition-fast);
   width: 100%;
@@ -130,6 +131,7 @@
   padding: var(--space-sm) var(--space-sm);
   border-radius: var(--radius-sm);
   font-size: 13px;
+  min-height: 44px;
   color: var(--text-secondary);
   cursor: pointer;
   transition: background var(--transition-fast);
@@ -301,8 +303,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: var(--accent-green);
   color: var(--bg-base);
@@ -335,7 +337,8 @@
   gap: 2px;
   flex: 1;
   padding: var(--space-xs);
-  font-size: 11px;
+  font-size: 12px;
+  min-height: 48px;
   color: var(--text-tertiary);
   transition: color var(--transition-fast);
 }
@@ -353,8 +356,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-sm);
   color: var(--text-secondary);
   transition: all var(--transition-fast);
@@ -414,4 +417,19 @@
     font-size: 11px;
     padding: 2px 8px;
   }
+}
+
+@media (max-width: 375px) {
+  .main-header {
+    padding: var(--space-xs) var(--space-sm);
+    min-height: 48px;
+  }
+  .input-bar {
+    padding: var(--space-xs);
+    gap: var(--space-xs);
+  }
+  .input-bar textarea {
+    font-size: 16px;
+  }
+  .history-group-label { font-size: 12px; }
 }
