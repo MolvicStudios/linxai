@@ -4,9 +4,11 @@
   inset: 0;
   z-index: 9999;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: var(--space-md);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .onboarding[hidden] {
@@ -14,7 +16,7 @@
 }
 
 .onboarding__backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
@@ -25,6 +27,7 @@
   position: relative;
   width: 100%;
   max-width: 480px;
+  margin: auto;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
