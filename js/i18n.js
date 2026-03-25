@@ -62,6 +62,9 @@ export const i18n = {
     reset_confirm: '¿Estás seguro? Se borrarán todos los datos.',
     save: 'Guardar',
     theme_dark: 'Oscuro',
+    theme_light: 'Claro',
+    theme_midnight: 'Midnight',
+    theme_forest: 'Forest',
     // Logo
     logo_subtitle: 'Tu guía en Linux',
     // Guide
@@ -196,6 +199,9 @@ export const i18n = {
     reset_confirm: 'Are you sure? All data will be deleted.',
     save: 'Save',
     theme_dark: 'Dark',
+    theme_light: 'Light',
+    theme_midnight: 'Midnight',
+    theme_forest: 'Forest',
     // Logo
     logo_subtitle: 'Your Linux Guide',
     // Guide

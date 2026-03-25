@@ -60,6 +60,19 @@ export function initSettings() {
     }
   })
 
+  // Theme select
+  const themeSelect = document.getElementById('settings-theme')
+  themeSelect.value = localStorage.getItem('linxai_theme') || 'dark'
+  themeSelect.addEventListener('change', () => {
+    const theme = themeSelect.value
+    localStorage.setItem('linxai_theme', theme)
+    document.documentElement.setAttribute('data-theme', theme)
+  })
+
+  // Apply saved theme on init
+  const savedTheme = localStorage.getItem('linxai_theme') || 'dark'
+  document.documentElement.setAttribute('data-theme', savedTheme)
+
   // Clear history
   document.getElementById('btn-clear-history').addEventListener('click', () => {
     if (confirm(t('reset_confirm'))) {
@@ -102,6 +115,9 @@ function openSettings() {
   })
   const keyGroup = document.getElementById('api-key-input-group')
   keyGroup.hidden = mode !== 'personal'
+
+  // Theme
+  document.getElementById('settings-theme').value = localStorage.getItem('linxai_theme') || 'dark'
 
   // Mask existing key
   const existingKey = localStorage.getItem('linxai_groq_key')

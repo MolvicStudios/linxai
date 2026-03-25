@@ -1,11 +1,42 @@
-/* dark.css — Dark theme (default & only theme for v1) */
-/* All colors are already defined as dark in tokens.css */
-/* This file is reserved for future light theme overrides */
+/* dark.css — Theme overrides & focus rings */
 
-/* Ensure proper dark styling on form elements */
+/* Form elements follow theme */
 select option {
   background: var(--bg-elevated);
   color: var(--text-primary);
+}
+
+/* Light theme specific overrides */
+[data-theme="light"] {
+  --scrollbar-thumb: rgba(0,0,0,0.2);
+}
+
+[data-theme="light"] .sidebar,
+[data-theme="light"] .settings-panel__content {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="light"] .chat-msg--assistant {
+  background: var(--bg-elevated);
+}
+
+[data-theme="light"] .onboarding__backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] code {
+  background: rgba(0,0,0,0.06);
+}
+
+[data-theme="light"] pre {
+  background: #1e1e2e;
+  color: #cdd6f4;
+}
+
+[data-theme="light"] pre code {
+  background: transparent;
+  color: inherit;
 }
 
 /* Focus rings */

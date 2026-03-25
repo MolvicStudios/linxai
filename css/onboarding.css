@@ -26,7 +26,7 @@
 .onboarding__card {
   position: relative;
   width: 100%;
-  max-width: 480px;
+  max-width: 540px;
   margin: auto;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -359,23 +359,106 @@
   background: var(--accent-green-dim);
 }
 
-/* Responsive */
+/* ===== Responsive ===== */
+
+/* Desktop wide */
+@media (min-width: 768px) {
+  .onboarding__card {
+    max-width: 580px;
+    padding: var(--space-2xl) var(--space-2xl);
+  }
+
+  .onboarding__distro-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablets */
+@media (max-width: 767px) and (min-width: 481px) {
+  .onboarding__card {
+    max-width: 480px;
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .onboarding__distro-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xs);
+  }
+
+  .distro-card {
+    padding: var(--space-sm);
+  }
+
+  .distro-card__icon {
+    font-size: 24px;
+  }
+
+  .distro-card__name {
+    font-size: 12px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 480px) {
+  .onboarding {
+    padding: var(--space-sm);
+  }
+
   .onboarding__card {
     padding: var(--space-lg) var(--space-md);
     border-radius: var(--radius-lg);
+    gap: var(--space-md);
   }
 
   .onboarding__title {
     font-size: 20px;
   }
 
+  .onboarding__desc {
+    font-size: 14px;
+  }
+
   .onboarding__distro-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xs);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .distro-card {
+    padding: var(--space-sm);
+    gap: 4px;
+    border-radius: var(--radius-sm);
+  }
+
+  .distro-card__icon {
+    font-size: 22px;
+  }
+
+  .distro-card__name {
+    font-size: 11px;
   }
 
   .onboarding__level-group {
     flex-direction: column;
+  }
+
+  .level-btn {
+    font-size: 12px;
+    padding: var(--space-sm);
+  }
+
+  .onboarding__api-key-group {
+    flex-direction: column;
+  }
+
+  .onboarding__nav {
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  .onboarding__distro-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
