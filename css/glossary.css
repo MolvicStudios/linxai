@@ -23,7 +23,6 @@
   min-height: 44px;
   font-family: var(--font-ui);
   margin-bottom: var(--space-md);
-  outline: none;
   transition: border-color var(--transition-fast);
 }
 
@@ -47,8 +46,8 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
   color: var(--text-secondary);
-  font-size: 12px;
-  min-height: 36px;
+  font-size: 13px;
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -166,9 +165,8 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
-  font-size: 12px;
+  font-size: 14px;
   font-family: var(--font-ui);
-  outline: none;
 }
 
 .history-search-input:focus {

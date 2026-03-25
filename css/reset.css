@@ -4,6 +4,23 @@
   padding: 0;
 }
 
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--accent-blue, #2563eb);
+  color: #fff;
+  border-radius: var(--radius-md, 8px);
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
 html, body {
   height: 100%;
   overflow: hidden;
@@ -42,7 +59,6 @@ input, textarea, select {
   color: inherit;
   background: none;
   border: none;
-  outline: none;
 }
 
 ul, ol {

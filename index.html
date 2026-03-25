@@ -71,6 +71,9 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Styles -->
+  <link rel="preload" href="/css/tokens.css" as="style">
+  <link rel="preload" href="/css/reset.css" as="style">
+  <link rel="preload" href="/css/layout.css" as="style">
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/layout.css">
@@ -86,21 +89,22 @@
   <link rel="stylesheet" href="/css/dark.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
   <div id="app" class="app">
 
     <!-- SIDEBAR -->
-    <aside id="sidebar" class="sidebar">
+    <aside id="sidebar" class="sidebar" aria-label="Navegación lateral">
       <div class="sidebar__header">
         <div class="sidebar__logo">
-          <img src="/icons/linxai-logo.svg" alt="LinxAI" style="width:160px; height:auto; display:block;">
-          <span style="display:block;font-size:12px;font-weight:400;opacity:0.6;letter-spacing:0.03em;line-height:1;">by <a href="https://molvicstudios.pro" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">MolvicStudios.pro</a></span>
+          <img src="/icons/linxai-logo.svg" alt="LinxAI" width="160" height="40" style="display:block;">
+          <span style="display:block;font-size:12px;font-weight:400;opacity:0.6;letter-spacing:0.03em;line-height:1;">by MolvicStudios.pro</span>
         </div>
         <button id="btn-sidebar-close" class="btn-icon sidebar__close" aria-label="Close sidebar">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
 
-      <nav class="sidebar__nav">
+      <nav class="sidebar__nav" aria-label="Principal">
         <button class="nav-btn nav-btn--active" data-mode="chat">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           <span data-i18n="mode_chat">Chat</span>
@@ -159,7 +163,7 @@
     </aside>
 
     <!-- MAIN PANEL -->
-    <main id="main-panel" class="main-panel">
+    <main id="main-content" class="main-panel">
 
       <!-- Header -->
       <header class="main-header">
@@ -206,7 +210,7 @@
 
       <!-- Input bar -->
       <div id="input-bar" class="input-bar">
-        <textarea id="chat-input" rows="1" data-i18n-placeholder="chat_placeholder" placeholder="Pregunta algo sobre Linux..."></textarea>
+        <textarea id="chat-input" rows="1" data-i18n-placeholder="chat_placeholder" placeholder="Pregunta algo sobre Linux..." aria-label="Mensaje al chat"></textarea>
         <button id="btn-send" class="btn-send" disabled aria-label="Send">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
@@ -215,7 +219,7 @@
     </main>
 
     <!-- MOBILE BOTTOM NAV -->
-    <nav id="mobile-nav" class="mobile-nav">
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil">
       <button class="mobile-nav__btn mobile-nav__btn--active" data-mode="chat">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <span data-i18n="mode_chat">Chat</span>
@@ -289,7 +293,7 @@
                 <span data-i18n="api_personal">Usar mi propia clave</span>
               </label>
               <div id="api-key-input-group" class="api-key-group" hidden>
-                <input type="password" id="settings-api-key" class="settings-input" placeholder="gsk_...">
+                <input type="password" id="settings-api-key" class="settings-input" placeholder="gsk_..." aria-label="Clave API de Groq">
                 <button id="btn-save-api-key" class="btn-sm" data-i18n="save">Guardar</button>
               </div>
             </div>
