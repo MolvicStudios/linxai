@@ -2,25 +2,31 @@
 import { getState } from './state.js'
 
 const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions'
-const SHARED_KEY = 'REEMPLAZAR_CON_TU_GROQ_KEY'
+const PROXY_ENDPOINT = 'https://linxai-proxy.josemmolera.workers.dev'
 const MODEL = 'llama-3.3-70b-versatile'
 
+function isPersonalMode() {
+  return localStorage.getItem('linxai_api_mode') === 'personal'
+}
+
 export function getApiKey() {
-  const mode = localStorage.getItem('linxai_api_mode')
-  if (mode === 'personal') {
-    return localStorage.getItem('linxai_groq_key') || SHARED_KEY
+  if (isPersonalMode()) {
+    return localStorage.getItem('linxai_groq_key') || ''
   }
-  return SHARED_KEY
+  return '' // shared mode uses proxy — no key on client
 }
 
 export async function askGroq(messages, systemPrompt) {
-  const key = getApiKey()
-  const response = await fetch(GROQ_ENDPOINT, {
+  const personal = isPersonalMode()
+  const endpoint = personal ? GROQ_ENDPOINT : PROXY_ENDPOINT
+  const headers = { 'Content-Type': 'application/json' }
+  if (personal) {
+    headers['Authorization'] = `Bearer ${getApiKey()}`
+  }
+
+  const response = await fetch(endpoint, {
     method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${key}`,
-      'Content-Type': 'application/json'
-    },
+    headers,
     body: JSON.stringify({
       model: MODEL,
       messages: [
