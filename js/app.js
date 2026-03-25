@@ -137,19 +137,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnClose = document.getElementById('btn-sidebar-close')
   const btnMobileMenu = document.getElementById('btn-mobile-menu')
 
-  btnOpen?.addEventListener('click', openSidebar)
+  btnOpen?.addEventListener('click', toggleSidebar)
   btnClose?.addEventListener('click', closeSidebar)
-  btnMobileMenu?.addEventListener('click', openSidebar)
+  btnMobileMenu?.addEventListener('click', toggleSidebar)
+
+  function toggleSidebar() {
+    if (sidebar.classList.contains('sidebar--open')) {
+      closeSidebar()
+    } else {
+      openSidebar()
+    }
+  }
 
   function openSidebar() {
     sidebar.classList.add('sidebar--open')
+    document.body.classList.add('sidebar-backdrop-active')
   }
 
   function closeSidebar() {
     sidebar.classList.remove('sidebar--open')
+    document.body.classList.remove('sidebar-backdrop-active')
   }
 
-  // Close sidebar when clicking outside on mobile
+  // Close sidebar when clicking backdrop or outside on mobile
+  const sidebarBackdrop = document.getElementById('sidebar-backdrop')
+  sidebarBackdrop?.addEventListener('click', closeSidebar)
+
   document.addEventListener('click', (e) => {
     if (window.innerWidth <= 768 && sidebar.classList.contains('sidebar--open')) {
       if (!sidebar.contains(e.target) && !btnOpen.contains(e.target) && !btnMobileMenu?.contains(e.target)) {

@@ -104,7 +104,6 @@
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 14px;
-  min-height: 44px;
   background: var(--bg-elevated);
   color: var(--text-secondary);
   border: 2px solid transparent;
@@ -175,7 +174,6 @@
   background: var(--bg-elevated);
   color: var(--text-secondary);
   font-size: 13px;
-  min-height: 44px;
   font-weight: 500;
   text-align: center;
   border: 2px solid transparent;
@@ -264,8 +262,7 @@
   border-radius: var(--radius-md);
   color: var(--text-primary);
   font-family: var(--font-mono);
-  font-size: 14px;
-  min-height: 44px;
+  font-size: 13px;
 }
 
 .onboarding__api-key-input:focus {
@@ -279,7 +276,6 @@
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 13px;
-  min-height: 44px;
   white-space: nowrap;
   transition: background var(--transition-fast);
 }
@@ -339,7 +335,6 @@
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 14px;
-  min-height: 44px;
   color: var(--text-secondary);
   background: var(--bg-elevated);
   transition: all var(--transition-fast);
@@ -354,7 +349,6 @@
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 14px;
-  min-height: 44px;
   background: var(--accent-green);
   color: var(--bg-base);
   margin-left: auto;
